@@ -1,0 +1,166 @@
+*{
+    --color1 : #deb887;
+    --color2 : #ffecce;
+    --colortext: rgb(73, 28, 28);
+
+}
+/*********************HEADER**************/
+.nav {
+    background-color: var(--color1);
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 1px 2px 6px;
+}
+
+header ul {
+    display: flex;
+    gap: 40px;
+    margin-right: 1cm;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+li{
+    justify-content: space-around;
+    list-style: none;
+}
+
+/************************* BODY ********************/
+h1{
+    text-align: center;
+    padding-top: 1cm;
+    color: var(--colortext);
+}
+
+h2{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--colortext);
+}
+
+.footer{
+    background-color: var(--color1);
+    padding: 1cm;
+    text-align: center;
+}
+
+.balbu, .vautour, .pigeon{
+    background-color: var(--color2);
+    border-radius: 30px;
+    justify-content: space-around;
+   box-shadow: 1px 2px 6px;
+   width: 400px;
+   height: 600px;
+}
+
+.container{
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-around;
+    padding:1cm 0.5cm 1cm 0.5cm ;
+    border-radius: 30px;
+    margin:  1cm 3cm 2cm 3cm;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 1cm 1cm 0cm 1.3cm; 
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--colortext);
+    padding: 0cm 1cm 0cm 1cm;
+    text-align: center;    
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+hr{
+    color: var(--colortext);
+    width: 80%;
+    border-bottom: var(--colortext);
+}
+
+footer hr {
+    width: 20%;
+    color: white;
+}
+
+footer ul{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+
+ /*******************FORM**********************/
+
+.form{
+    background-color: var(--color2);
+    padding: 2cm;
+    border-radius: 20px;
+    box-shadow:1px 2px 6px;
+    color: var(--colortext);
+    
+}
+
+.containerForm{
+    background-color: var(--color1);
+    margin: 2cm 3cm;
+    padding: 2cm 4cm ;
+    border-radius: 20px;
+    
+}
+
+input{
+    border-radius: 8px;
+    border: none;
+    padding: 7px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+textarea{
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    resize: none;
+    
+}
+
+.submit{
+    width: 80px;
+    align-self: center;
+    cursor: pointer;
+}
+
+/****************GALERIE*******************/
+
+.galerie{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contgal{
+    background-color: var(--color1);
+    border-radius: 10px;
+    margin: 1cm 3cm;
+}
+.galerie img{
+    margin: 5px;
+}
