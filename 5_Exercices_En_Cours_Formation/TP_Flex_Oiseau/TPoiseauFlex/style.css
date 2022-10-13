@@ -5,7 +5,7 @@
 
 }
 /*********************HEADER**************/
-.nav {
+nav {
     background-color: var(--color1);
     display: flex;
     justify-content: flex-end;
@@ -40,6 +40,9 @@ h2{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: var(--colortext);
+    border-bottom: 1px solid var(--colortext);
+    margin-left: 50px ;
+    margin-right: 50px;
 }
 
 .footer{
@@ -101,6 +104,12 @@ footer ul{
     justify-content: center;
 }
 
+.haut{
+    border-bottom: 1px solid white;
+    margin-left: 100px ;
+    margin-right: 50px;
+    padding-bottom: 0.2cm;
+}
 
  /*******************FORM**********************/
 
