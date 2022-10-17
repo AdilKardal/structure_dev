@@ -5,7 +5,12 @@
 
 /*****************************HEADER*************************/
 
-
+body{
+    background:url(/images/bgg.jpg);
+    background-attachment: fixed;
+    
+    
+}
 header nav {
     display: flex;
     justify-content: end;
@@ -50,14 +55,15 @@ h2 {
 
 .profil {
     background-color: var(--color1);
-    width: 10cm;
+    width: 20cm;
     align-content: flex-end;
-    margin-left: 5cm;
+    margin-left: 6cm;
     border-radius: 10px;
+    margin-bottom: 10cm;
 }
 
 .profil h4 {
-
+    text-align: center;
     border-bottom: 4px solid white;
     padding: 1cm;
     margin: 0cm 2cm
@@ -66,6 +72,7 @@ h2 {
 .profil p {
     color: white;
     text-align: center;
+    padding: 0px 100px;
 }
 
 h3,
@@ -87,6 +94,7 @@ span {
 .experiences {
     font-weight: bold;
     font-size: 20px;
+    text-decoration: underline;
 }
 
 p {
@@ -123,7 +131,7 @@ footer p {
 
 .containerForm {
     background-color: var(--color1);
-    margin: 2cm 3cm;
+    margin: 2cm 10cm;
     padding: 2cm 4cm;
     border-radius: 20px;
 }
@@ -159,34 +167,48 @@ textarea{
 
 
 @media(max-width:760px) {
-    .form{
-        width: 200px;
-        margin: 10px;  
-        padding: 10px;  
-        display: flex;
-        justify-content: center;
-    }
-    .containerForm{
-        padding: 10px;
-        margin: 10px;
-    }
-    .container{
-        flex-wrap: wrap;
-     }
+   h1{
+    font-size: 2em;
+   }
+   
+  img{
+    width: 1000px;
+    height: 150px;
+  }
+
 }
 
 
-@media(max-width:400px) {
-    .form{
-        width: 200px;
-        margin: 10px;  
-        padding: 10px;  
-    }
-    .containerForm{
-        padding: 10px;
-        margin: 10px;
-    }
-    .container{
-        flex-wrap: wrap;
-     }
+
+.crea{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color1);
+    margin: 1cm;
+    border-radius: 20px;
+}
+
+.creation{
+    
+    margin: 1cm;
+border-radius: 20px;
+}
+
+img{
+    height: 300px;
+    width: 500px;
+    border-radius: 30px;
+}
+
+.crea p{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-decoration: underline var(--color2);
+
+}
+
+img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
