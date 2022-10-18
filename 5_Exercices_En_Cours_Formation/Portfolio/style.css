@@ -270,7 +270,8 @@ textarea {
 @media(max-width:500px){
     .containerForm{
         width: 350px;
-        margin:30px 10px 200px ;
+        margin-left:20px;
+        margin-bottom:200px ;
     }
 }
 /****************************PORTFOLIO*************************/
