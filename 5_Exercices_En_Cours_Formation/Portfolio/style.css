@@ -5,12 +5,15 @@
 
 /*****************************HEADER*************************/
 
-body{
-    background:url(/images/bgg.jpg);
+body {
+    background: url(/images/bgg.jpg);
     background-attachment: fixed;
-    
-    
+    background-position: right;
+    background-repeat: no-repeat;
+
+
 }
+
 header nav {
     display: flex;
     justify-content: end;
@@ -43,10 +46,11 @@ h2 {
     margin-left: 1.5cm;
 }
 
-/************************BODY********************************/
+/************************CV********************************/
 
 .container {
     display: flex;
+
 }
 
 .page {
@@ -101,16 +105,77 @@ p {
     font-size: 20px;
 }
 
+@media(max-width:1080px) {
+    .profil {
+        margin: 0px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .container {
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    footer {
+        margin-top: 10px;
+    }
+}
+
+@media(max-width:680px) {
+    body {
+        background: none;
+    }
+
+    .profil {
+        padding-right: 0px;
+    }
+
+    .profil p {
+        padding: 0px 20px;
+    }
+
+    .profil h4 {
+        margin: 1px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .page {
+        margin-left: 0px;
+    }
+
+    footer {
+        margin-top: 10px;
+        width: 100%;
+    }
+ }
+
+
 /***********FOOTER*********/
+footer {
+    background-color: var(--color1);
+    padding: 1px;
+
+}
 
 .haut {
     text-align: center;
-    color: var(--color1);
-    font-weight: bold;
-    border-bottom: 1px solid var(--color1);
+    border-bottom: 1px solid white;
     margin-left: 100px;
     margin-right: 100px;
     padding-bottom: 0.2cm;
+    color: white;
 }
 
 footer ul {
@@ -120,7 +185,7 @@ footer ul {
 }
 
 footer a {
-    color: var(--color1);
+    color: white;
 }
 
 footer p {
@@ -131,27 +196,29 @@ footer p {
 
 .containerForm {
     background-color: var(--color1);
-    margin: 2cm 10cm;
-    padding: 2cm 4cm;
+    margin: 30px 400px;
+    padding: 20px 40px;
     border-radius: 20px;
+    width: 800px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--color2);
     text-align: center;
     font-weight: bold;
+
 }
 
-input{
+input {
     border-radius: 8px;
     border: none;
     padding: 7px;
 }
 
-textarea{
+textarea {
     border: none;
     border-radius: 8px;
     margin-top: 20px;
@@ -159,28 +226,54 @@ textarea{
     resize: none;
 }
 
-.submit{
+.submit {
     width: 80px;
     align-self: center;
     cursor: pointer;
 }
 
-
-@media(max-width:760px) {
-   h1{
-    font-size: 2em;
-   }
-   
-  img{
-    width: 1000px;
-    height: 150px;
-  }
-
+@media(max-width:1290px){
+    .containerForm{
+        width: 800px;
+        margin:30px 200px ;
+    }
+}
+@media(max-width:1090px){
+    .containerForm{
+        width: 800px;
+        margin:30px 100px ;
+    }
 }
 
+@media(max-width:990px){
+    .containerForm{
+        width: 800px;
+        margin:30px 50px ;
+        padding: 10px;
+    }
+}
 
+@media(max-width:800px){
+    .containerForm{
+        width: 600px;
+        margin:30px 50px;
+    }
+}
 
-.crea{
+@media(max-width:675px){
+    .containerForm{
+        width: 400px;
+        margin:30px 60px ;
+    }
+}
+@media(max-width:500px){
+    .containerForm{
+        width: 350px;
+        margin:30px 10px 200px ;
+    }
+}
+/****************************PORTFOLIO*************************/
+.crea {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--color1);
@@ -188,27 +281,28 @@ textarea{
     border-radius: 20px;
 }
 
-.creation{
-    
+.creation {
+
     margin: 1cm;
-border-radius: 20px;
+    border-radius: 20px;
 }
 
-img{
+img {
     height: 300px;
     width: 500px;
     border-radius: 30px;
 }
 
-.crea p{
+.crea p {
     text-align: center;
     font-size: 20px;
     color: white;
     text-decoration: underline var(--color2);
+    cursor: pointer;
 
 }
 
-img:hover{
+img:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
