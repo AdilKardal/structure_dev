@@ -10,6 +10,7 @@ body {
     background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
+    margin: 0px;
 
 
 }
@@ -167,6 +168,7 @@ p {
 footer {
     background-color: var(--color1);
     padding: 1px;
+    margin-top: 100px;
 
 }
 
@@ -197,10 +199,11 @@ footer p {
 
 .containerForm {
     background-color: var(--color1);
-    margin: 30px 400px;
+    margin: auto;
     padding: 20px 40px;
     border-radius: 20px;
     width: 800px;
+    
 }
 
 form {
@@ -231,7 +234,19 @@ textarea {
     width: 80px;
     align-self: center;
     cursor: pointer;
+    color: #f9ba00;
+    background-color: #003350;
+    border: 2px solid white;
 }
+
+.submit:hover{
+    background-color: var(--color2);
+    color: var(--color1);
+    font-weight: bold;
+    transform: scale(1.2);
+}
+
+
 
 @media(max-width:1290px){
     .containerForm{
@@ -279,13 +294,14 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--color1);
-    margin: 1cm;
+    margin: 30px 80px;
     border-radius: 20px;
+    
 }
 
 .creation {
 
-    margin: 1cm;
+    margin: 40px;
     border-radius: 20px;
 }
 
@@ -320,4 +336,16 @@ img:hover {
     .crea{
         margin: 0px;
     }
+}
+
+/*************************FINFORM***************/
+.fin{
+    font-size: 2em;
+    color: var(--color1);
+    text-align: center;
+}
+
+.acc{
+    color: var(--color2);
+    text-decoration: none;
 }
