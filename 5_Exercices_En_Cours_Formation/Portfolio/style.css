@@ -339,10 +339,12 @@ img:hover {
 }
 
 /*************************FINFORM***************/
+
 .fin{
     font-size: 2em;
     color: var(--color1);
     text-align: center;
+    margin-top:100px ;
 }
 
 .acc{
