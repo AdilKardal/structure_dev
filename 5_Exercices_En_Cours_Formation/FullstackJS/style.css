@@ -1,0 +1,121 @@
+*{
+    --color1:#991b1c;
+    --color2:#e6e7eb;
+}
+
+body{
+margin: 0px;
+
+}
+
+header{
+    background-color: var(--color1);
+    box-shadow: 1px 5px 10px;
+   
+}
+
+h1{
+    background-color: var(--color1);
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+    padding: 10px;
+    margin-top: 0px;
+    font-size: 3em;
+    margin-bottom: 0px;
+}
+
+h2{
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+nav{
+    display: flex;
+     justify-content: space-between;
+}
+
+a{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav{
+    margin-left: 20px;
+    padding-right: 50px;
+}
+.accueil{ 
+    display: flex;
+    align-self: flex-end;
+    padding-left: 50px;
+    
+    
+}
+.profil{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.span{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif ;
+    font-weight: bold;
+    font-size: 1em;
+    
+
+}
+span{
+    color: white;
+    background-color: var(--color1);
+    display: inline-block;
+    transform: rotate(-5deg);
+
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+}
+.haut ,.milieu ,.bas, .cle, .ampoule{
+    display: flex;
+}
+
+article div{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color2);
+    text-align: center;
+    justify-content: center;
+}
+
+img{
+
+}
+
+div p{
+    padding: 0px 200px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.cle div{
+    background-color: black;
+    color: white;
+}
+
+.ampoule div{
+    width: 50%;
+}
+
+
+
+
