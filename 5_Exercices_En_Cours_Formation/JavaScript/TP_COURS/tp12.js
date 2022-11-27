@@ -1,3 +1,4 @@
+
 // - Demandez de faire un choix entre addition – soustraction – multiplication – division
 // - Indice : pour un retour à la ligne « \n » tant que l’utilisateur ne choisis pas une des quatre
 // proposition il serait bien de répéter la question.
