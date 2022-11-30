@@ -1,3 +1,17 @@
+console.log("TP 24 1");
+
+/*
+1 l'utilisateur click sur "demarer le jeux"     OK
+2 le jeux génère un chiffre aleatoire           OK
+3 l'utilisateur saisi une valeur 
+4 l'utilsiateur click sur "envoyer valeur"
+5 on verifie que la valeur soit un nombre entre 1 et 1000 
+6 cette valeur est comparer a la valeur aléatoire 
+7 si elle est plus grande message affiche "trop cher"
+8 si elle est plus petite message affiche "moins cher"
+9 si la valeur est identique  message affiche "prix OK*
+10 on propose à l'utilisateur de recommencer */
+
 let buttonSelector = document.querySelector("button");
 let reponse = document.querySelector(".reponse");
 let nombreCache = 0;
@@ -18,13 +32,13 @@ buttonSelector.addEventListener("click", function () {
 });
 
 function valeurAleatoire() {
-  nombreCache = [Math.floor(Math.random() * 100)];
+  nombreCache = [Math.floor(Math.random() * 1000)];
   return nombreCache;
 }
 
 function afficherBouton() {
   if (commencer == false) {
-    buttonSelector.innerText = "Démarrer le jeu";
+    buttonSelector.innerText = "Démarer le jeux";
   } else {
     buttonSelector.innerText = "Comparer la valeur";
   }
@@ -38,14 +52,13 @@ function afficher() {
 
 function comparer() {
   if (textInput < nombreCache) {
-    reponse.innerText = "C'est plus cher";
+    message.innerText = "C'est plus cher";
   } else if (textInput > nombreCache) {
-    reponse.innerText = "C'est moins cher";
+    message.innerText = "C'est moins cher";
   } else if (textInput == nombreCache) {
-    reponse.innerText = " C'est le juste prix !";
-    textInput.value = " "
+    message.innerText = " C'est le juste prix !";
     commencer = false;
   } else {
-    reponse.innerText = "Veuillez saisir valeur correct";
+    message.innerText = "Veuillez saisir valeur correct";
   }
 }

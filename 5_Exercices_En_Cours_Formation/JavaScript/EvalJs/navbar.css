@@ -1,0 +1,32 @@
+body{
+    background-color: rgba(0, 0, 0, 0.932);
+}
+
+.icon{
+   font-size: 4em;
+    color: white;
+}
+
+a{
+    font-size: 100px;
+    color: white;
+    text-decoration: none;
+    margin-left: 200px; 
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    height: 8vh;
+    overflow: hidden;
+    transition: height 3s;
+}
+
+
+nav div:hover > a{
+    opacity: 0.3;
+}
+
+nav div:hover > a:hover{
+    opacity: 1;
+}
