@@ -24,7 +24,7 @@ p {
 }
 
 section:nth-child(even) > aside > button {
-  background: linear-gradient(to right, #36d2b0, #9cd996) !important;
+  background: linear-gradient(to right, #36d2b0, #9cd996);
 }
 main {
   display: flex;

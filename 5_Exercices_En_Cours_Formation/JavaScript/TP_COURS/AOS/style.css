@@ -1,0 +1,10 @@
+article{
+    width: 30%;
+    height: 200px;
+    background-color: rgb(8, 22, 102);
+    color: white;
+    font-size: 2em;
+}
+article:nth-child(odd){
+    background-color: rgb(196, 36, 36);
+}

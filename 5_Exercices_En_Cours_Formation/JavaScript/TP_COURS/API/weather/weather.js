@@ -17,11 +17,15 @@ btnSelector.addEventListener("click", function () {
     })
     .then((weatherCity) => {
       console.log(weatherCity);
+      meteo(weatherCity)
+    });
+});
+
+function meteo(weatherCity){
       pSelector.textContent = weatherCity.name;
       temperature.textContent = `${Math.round(weatherCity.main.temp)}°`;
       description.textContent = weatherCity.weather[0].description;
       icone.src = `http://openweathermap.org/img/wn/${weatherCity.weather[0].icon}@2x.png`
-    });
-});
+}
 
 
