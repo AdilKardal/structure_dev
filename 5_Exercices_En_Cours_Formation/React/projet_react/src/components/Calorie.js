@@ -13,7 +13,7 @@ function Calorie() {
     let age = Number(e.target.parentElement.parentElement.children[1].children[1].children[2].children[0].value)
     let taille = Number(e.target.parentElement.parentElement.children[1].children[1].children[3].children[0].value)
     let poids = Number(e.target.parentElement.parentElement.children[1].children[1].children[4].children[0].value)
-    let activite = Number(e.target.parentElement.parentElement.children[1].children[1].children[5].children[0].value)
+    let activite = Number(e.target.parentElement.parentElement.children[1].children[1].children[6].value)
    
    console.log(homme, age, taille, poids, activite)
    if (!homme && !femme) {
@@ -50,7 +50,19 @@ function Calorie() {
           <label>Age:<input type="text"/></label>
           <label>Taille:<input placeholder='En cm..'/></label>
           <label>Poids:<input placeholder='En kg..'/></label>
-          <label>Activite:<input type="text"/></label>
+          <label for="activites">Activite:</label>
+          
+
+<select  id="activites">
+    <option value="">--Liste activité--</option>
+    <option value="1">Journée au repos</option>
+    <option value="1.2">Travail sédentaire assis pas de sport</option>
+    <option value="1.4">Travail sédentaire 30 min marche</option>
+    <option value="1.6">Travail sédentaire 1h de sport</option>
+    <option value="1.7">Travail sédentaire 1h30 a 2h</option>
+    <option value="1.9">Travail physique 1h30 de sport</option>
+    <option value="2">Travail physique 3/4h de sport</option>  
+</select>
           </form>
 
           
