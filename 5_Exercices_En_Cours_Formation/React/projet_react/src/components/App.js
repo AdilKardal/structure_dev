@@ -12,16 +12,19 @@ import Garage from "./Voiture";
 import Example from "./ButtonBootstrap";
 import Header from "./Header";
 import Calorie from "./Calorie";
+import Connect from "./Login";
+import Deco from "./Deconnexion";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <Header />
         <img src={logo} className="App-logo" alt="logo" />
-        
+
+        {!localStorage.getItem("connecte") ? (<Connect />) : (
+<>      <Header />
         <Routes>
-          <Route exact path="/" element={<Hellook />}/>   
+          <Route exact path="/InputHook" element={<Hellook />}/>   
           <Route exact path="/Increment" element={<Counter />}/>  
           <Route exact path="/Voiture" element={<Garage />}/>  
           <Route exact path="/ButtonBootstrap" element={<Example />}/>  
@@ -30,7 +33,11 @@ function App() {
           <Route exact path="/Clhook" element={<Clhook />}/>  
           <Route exact path="/Fruits" element={<Fruits />}/>  
           <Route exact path="/Calorie" element={<Calorie />}/> 
+          <Route exact path="/Deconnexion" element={<Deco />}/> 
+          
         </Routes>
+        
+</>)}
         
        
         {/* <p> Edit <code>src/App.js</code> and save to reload.</p>   */}
