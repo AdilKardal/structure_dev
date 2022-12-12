@@ -23,10 +23,10 @@ function Calorie() {
    }
    
    if (homme){
-    setResult(Math.round(66.5 + (13.75 * poids) + (5 * taille) - (6.77 * age) * activite));
+    setResult(Math.round((66.5 + (13.75 * poids) + (5 * taille) - (6.77 * age)) * activite));
     console.log(Math.round(66.5 + (13.75 * poids) + (5 * taille) - (6.77 * age) * activite));
    } else{
-    setResult(Math.round(665.1 + (9.56 * poids) + (1.85 * taille) - (4.67 * age) * activite));
+    setResult(Math.round((665.1 + (9.56 * poids) + (1.85 * taille) - (4.67 * age)) * activite));
     console.log(result);
    }
 
