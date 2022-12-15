@@ -14,6 +14,7 @@ function Header() {
             <Link to="/Clhook"> <Button variant="outline-primary">Heure</Button> </Link>
             <Link to="/Increment"> <Button variant="outline-primary">+ / -</Button> </Link>
             <Link to="/Calorie"> <Button variant="outline-primary">Besoin Calorique</Button> </Link>
+            <Link to="/KanbanE"> <Button variant="outline-primary">Kanban</Button> </Link>
             <Link to="/Deconnexion"> <Button variant="danger">Deconnexion</Button> </Link>
         </nav>
     );

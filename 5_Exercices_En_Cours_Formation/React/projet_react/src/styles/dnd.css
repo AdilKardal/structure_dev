@@ -1,0 +1,64 @@
+#col{
+    background-color: rgb(255, 255, 255);
+    color: rgb(9, 99, 105);
+    margin: 10px 5px ;
+    cursor: pointer;
+}
+article{
+       border: 2px dotted white;
+       margin: 5px;
+       padding: 10px;
+}
+section{
+    display:flex;
+    margin-top: 30px;
+    gap: 30px;
+ 
+}
+
+#todo{
+    background-color: rgb(212, 49, 85);
+    margin-right: 30px;
+    
+}
+
+#doing{
+    background-color: rgb(247, 227, 114);
+    margin-left: 10px;
+    width: 150px;
+}
+
+#done{
+    background-color: rgb(40, 211, 40);
+    margin-left: 30px;
+    width: 150px;
+}
+
+#taches {
+    display: flex;
+    color: black;
+    /* cursor: pointer; */
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: inline;
+    margin-top: 20px;
+    font-size: 15px;
+    width: 20%;
+}
+
+#btn{
+    font-size: 10px;
+    width: 20%;
+    align-self: center;
+    border-radius: 50px;
+    background-color: red;
+    border: 1px solid black;
+}
+
+#arrow{
+    font-size: 10px;
+    height: 20px;
+}

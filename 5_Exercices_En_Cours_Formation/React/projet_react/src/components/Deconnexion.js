@@ -1,13 +1,11 @@
-import { redirect } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-
-
-  function Deco() {
-    localStorage.removeItem("connecte");
-
+ function Deco() {
+  function deconnexion(){
+     localStorage.removeItem("connecte");
+  }
+  
     return (
       <form>
-        <button onClick={Deco} >
+        <button onClick={deconnexion} >
           Déconnexion
         </button>
       </form>
