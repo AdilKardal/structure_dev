@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+</head>
+<body>
+    <header>
+
+       <a href="index.html"><h1>Laia Créa </h1></a> 
+    <nav>
+        <a href="index.html">Accueil</a>
+        <div class="dropdown">
+          <a href="">Nos coffrets<span class="material-icons-outlined">
+            expand_more
+            </span></a>
+          <div class="dropdown-content">
+            <a href="#">Mariages</a>
+            <a href="./naissance.html">Naissances</a>
+            <a href="#">Voyage</a>
+          </div>
+        </div>
+        <a href="">Personnalisation</a>
+        <a href="">Profil</a>
+        <a href="contact.html">Contact</a>
+        <span class="material-icons-outlined">
+          login
+          </span>
+      </nav>
+    </header>
+
+    <section class="formcontain">
+        <form>
+       <div>
+        <input type="text" id="name" placeholder="Nom*" />
+        <input type="text" id="prenom" placeholder="Prénom*" />
+       </div>     
+        
+        <input type="email" id="email" placeholder="Email*"/>
+    
+        <select name="motif" id="motif" >
+            <option value="">-Motif de votre demande-</option>
+            <option value="infos">Informations</option>
+            <option value="perso">Demande de personnalisation</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="autres">Autres</option>
+        </select>
+        
+        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Votre message*"></textarea>
+
+        <button>Envoyer</button>
+    </form>
+
+    </section>
+    
+    <footer> 
+        <p> &copy; LaiaCréa  - 2023</p>
+    </footer>
+</body>
+</html>
