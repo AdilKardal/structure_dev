@@ -1,0 +1,188 @@
+body{
+    background-color: #4C85B6;
+    margin: 0;
+    height: 100vh;
+}
+/**********************CONNEXION**************************/
+.container{ 
+   display: flex; 
+ height: 100vh;
+}
+
+.connect{
+    background-color: black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.connect h1{
+    text-align: center;
+    color: #5584ac;
+    font-size: 4em;
+}
+.connect h2{
+    text-align:center;
+    color: white;
+}
+
+.connect form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.connect input{
+    background-color: black;
+    color: white;
+    width: 70%;
+    height: 30px;
+    border: 2px solid #D4D4D4;
+    border-radius: 5px;
+    margin: 1%;
+}
+#btnconnect{
+    background-color: #4C85B6;
+    color: white;
+    height: 40px;
+}
+.musicien{
+    background-color: #8CC04D;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.musicien img{
+    align-self: center;
+    width: 70%;
+}
+.covid{
+    margin: 5% 20% 0% 20%;
+    text-align: center;
+    font-size: 30px;
+}
+.alex{
+    text-align: center;
+    font-size:10px;
+}
+
+/************************HEADER***********************/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    background-color: black;
+    color: white;
+}
+header h1{
+    color: #4C85B6;
+}
+
+header a{
+    text-decoration: none;
+    color: grey;
+   margin: 0px 20px;
+    font-size: 30px;
+}
+
+header a:hover{
+    color: white;
+}
+.adeco{
+    background-color: black;
+    border: none;
+    color: red;
+    font-size: 10px;
+    height: 40px;
+    justify-content: center;
+}
+.avatar{
+    border-radius: 40px;
+    border: 1px solid white;
+}
+.avanav{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.deco{
+    display: none;
+}
+
+/************************FOOTER***********************/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 150px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/************************ACCUEIL*******************/
+.haut{
+    display: flex;
+    justify-content: space-around;
+    background-color: #5584AC ;
+    color: white;
+}
+
+.haut img{
+    width: 20%;
+}
+.haut p{
+    margin-bottom: 10%;
+}
+.candidature{
+background-color: white;
+color: #5584AC;
+border: none;
+height: 30px;
+box-shadow: 1px 4px 5px #75a3ca;
+}
+
+.btnformation{
+    margin-left: 1%;
+    background-color: #5584AC;
+    color: white;
+    border: 1px solid white;
+    height: 30px;
+}
+
+.milieu{
+    padding-top: 10px;
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.bas{
+    background-color: #5584AC;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.arrow img {
+    margin: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding:5px ;
+}
