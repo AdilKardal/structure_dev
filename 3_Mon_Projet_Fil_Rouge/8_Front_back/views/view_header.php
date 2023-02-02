@@ -1,4 +1,4 @@
-<?php include("../models/connect.php");
+<?php include_once("../models/connect.php");
 // var_dump($_SESSION);die;
 ?>
 
@@ -17,8 +17,13 @@
     <a href="">Personnalisation</a>
     <a href="">Profil</a>
     <a href="contact.html">Contact</a>
-    
-    <span class="material-icons-outlined">
-      login
-      </span>
+    <?php
+    if (isset($_SESSION['user']) && $_SESSION['user'] !== null) {
+      echo '<a class="btnconnect" href="../controllers/controller_deconnexion.php">Déconnexion</a>';
+    } else {
+     echo '<a class="btnconnect" href="view_connexion.php">Connexion</a>';
+    }
+     
+   
+      ?>
   </nav>

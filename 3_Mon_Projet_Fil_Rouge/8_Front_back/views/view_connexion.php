@@ -10,7 +10,6 @@
 </head>
 <body>
     <section class="container">
-
     <article class="connect">
         <h1>Connectez-vous</h1>
         <form action="../controllers/controller_connexion.php" method="post">
