@@ -1,5 +1,5 @@
 import "../styles/dnd.css";
-
+import {Draggable, Droppable} from 'react-drag-and-drop'
 import React, { useState } from "react";
 
 function Kanban() {
@@ -21,12 +21,15 @@ function Kanban() {
 
   id.map((tache) => {
     colonnes[tache.cat].push(
-    <span id="taches">
-    <button id="arrow">&larr;</button>
-    {tache.nom}
-    <button id="arrow">&rarr;</button>
-    <button id="btn" onClick={deleteTask}>X</button>
-    </span>);
+<Draggable>
+      <span id="taches">
+        {/* <button id="arrow">&larr;</button> */}
+        {tache.nom}
+        {/* <button id="arrow">&rarr;</button> */} 
+        <button id="btn" onClick={deleteTask}>X</button>
+    </span>
+</Draggable>
+    );
   });
 
   function addTask(e) {
@@ -41,9 +44,9 @@ function Kanban() {
       setId(copie);
   }
 
-  function changeCol(){
+  // function changeCol(){
      
-  }
+  // }
   return (
     <>
         <form>
@@ -55,17 +58,19 @@ function Kanban() {
  
           <div id="todo">
           ToDo
-          <p>{colonnes.ToDo}</p>
+        <p>{colonnes.ToDo}</p>
         </div>
         
         <div id="doing">
           Doing
-         <p>{colonnes.Doing}</p>
+        <p>{colonnes.Doing}</p>
         </div>
+
         <div id="done">
           Done
-          <p>{colonnes.Done}</p>
+       <p>{colonnes.Done}</p>
         </div>
+
       </section>
     </>
   );
