@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+     <section class="container">
+
+    <article class="connect">
+        <h1>ADRAR Classrooms</h1>
+        <h2>Bienvenue</h2>
+        <form method="post">
+            <label for="form_email">E-mail</label>
+            <input type="email" name="form_email" required>
+            <label for="form_password">Mot de passe</label>
+            <input type="password" name="form_password">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate')}}"/>
+            <input type="submit" value="Se connecter" id="btnconnect">
+            <p>Pas encore inscrit ? <a href="{{ path('app_register') }}">Inscrivez-Vous</a></p>
+        </form>
+        
+    </article>
+    <article class="musicien">
+      <div>
+          <p class="covid">« J'étais musicien indépendant, mais le COVID a tout stoppé. On m’a parlé d’ADRAR Classrooms, ça m'a ouvert des opportunités professionnelles insoupçonnées. »</p>
+        <p class="alex">Alexandre - Développeur Full-Stack Junior</p>
+      </div>
+      
+        <img src="images/homme.png" alt="" width="60%">
+    </article>
+
+</section>
+
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+
+{% endblock %}

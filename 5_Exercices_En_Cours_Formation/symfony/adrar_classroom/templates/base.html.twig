@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AdrarClassrooms - {% block title %}{% endblock %}</title>
+        <link rel="icon" href="{{ asset('images/logo.png')}}">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="stylesheet" href="{{ asset('style.css')}}">
+        {% block css %}
+           
+        {% endblock %}
+        
+       
+    </head>
+    <body>
+       
+        {% block body %}
+        
+        {% endblock %}
+
+         
+
+     <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,258 @@
+body{
+    background-color: #4C85B6;
+    margin: 0;
+    height: 100vh;
+}
+/**********************CONNEXION**************************/
+.container{ 
+   display: flex; 
+ height: 100vh;
+}
+
+.connect{
+    background-color: black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.connect h1{
+    text-align: center;
+    color: #5584ac;
+    font-size: 4em;
+}
+.connect h2{
+    text-align:center;
+    color: white;
+}
+
+.connect form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.connect input{
+    background-color: black;
+    color: white;
+    width: 70%;
+    height: 30px;
+    border: 2px solid #D4D4D4;
+    border-radius: 5px;
+    margin: 1%;
+}
+#btnconnect{
+    background-color: #4C85B6;
+    color: white;
+    height: 40px;
+}
+.musicien{
+    background-color: #8CC04D;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.musicien img{
+    align-self: center;
+    width: 70%;
+}
+.covid{
+    margin: 5% 20% 0% 20%;
+    text-align: center;
+    font-size: 30px;
+}
+.alex{
+    text-align: center;
+    font-size:10px;
+}
+
+/************************HEADER***********************/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    background-color: black;
+    color: white;
+}
+header h1{
+    color: #4C85B6;
+}
+
+header a{
+    text-decoration: none;
+    color: grey;
+   margin: 0px 20px;
+    font-size: 30px;
+}
+
+header a:hover{
+    color: white;
+}
+.btnheader{
+    width: 10%;
+    height: 50px;
+    font-size: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #4C85B6;
+    color: #4C85B6;
+}
+.adeco{
+    background-color: black;
+    border: none;
+    color: red;
+    font-size: 10px;
+    height: 40px;
+    justify-content: center;
+}
+.avatar{
+    border-radius: 40px;
+    border: 1px solid white;
+}
+.avanav{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.deco{
+    display: none;
+}
+
+/************************FOOTER***********************/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 150px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/************************ACCUEIL*******************/
+.haut{
+    display: flex;
+    justify-content: space-around;
+    background-color: #5584AC ;
+    color: white;
+}
+
+.haut img{
+    width: 20%;
+}
+.haut p{
+    margin-bottom: 10%;
+}
+.candidature{
+background-color: white;
+color: #5584AC;
+border: none;
+height: 30px;
+box-shadow: 1px 4px 5px #75a3ca;
+}
+
+.btnformation{
+    margin-left: 1%;
+    background-color: #5584AC;
+    color: white;
+    border: 1px solid white;
+    height: 30px;
+}
+
+.milieu{
+    padding-top: 10px;
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.bas{
+    background-color: #5584AC;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.arrow img {
+    margin: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding:5px ;
+}
+/***********************************************FORMATIONS****************************************/
+/* .formations{
+    display: flex;
+    justify-content: center;
+} */
+
+h2{
+    margin-left: 2%;
+    color: white;
+}
+select{
+    background-color: #000000;
+    color: white;
+    font-size: 20px;
+    margin-left:2% ;
+}
+.cards{
+    display: flex;
+    width: 70%;
+    height: 150px;
+    margin: 2%;
+    background-color: black;
+}
+.col{
+    width: 30%;
+    margin: 2%;
+    height: 80%;
+}
+.cour h4{
+    color:#4C85B6 ;
+}
+.cards p{
+    color: white;
+}
+
+.vert{
+    background-color: #8CC04D;
+}
+.orange{
+    background-color: #F7A60F;
+}
+.rouge{
+    background-color: #E94C39;
+}
+.bleu{
+    background-color: #5EC2EF;
+}
+.blanc{
+    background-color: white;
+}
+/***************************************Cours********************************/
+.infocours{
+    background-color: #4C85B6;
+    display: flex;
+    flex-direction: column;
+}
