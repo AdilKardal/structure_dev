@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}
+	<header>
+		<a href="{{ path('app_accueil')}}"><img src="{{ asset("images/logo.png")}}" alt="" width="80"></a>
+		<h1>Classrooms</h1>
+		<nav>
+			<a href="{{path('app_accueil')}}">Accueil</a>
+			<a href="{{path('app_formations')}}">Formations</a>
+			<a href="{{path('app_accueil')}}">Administration</a>
+		</nav>
+		<img src="./images/outline_search_white_24dp.png" alt="" width="40">
+
+
+		{% if app.user %}
+
+
+			<div class="user">
+				<p>{{ app.user.UtilisateurNom }}</p>
+				<p>{{ app.user.UtilisateurPrenom }}</p>
+				<img class="avanav" src="{{ asset("uploads/users/" ~ app.user.UtilisateurImage) }}">
+
+				<div class="deco">
+					<a class="adeco" href="{{ path('app_logout') }}">Déconnexion</a>
+				</div>
+			</div>
+		{% else %}
+			<button class="btnheader" onclick="window.location.href = '{{path('app_login')}}';">Se connecter</button>
+		{% endif %}
+
+	</header>
+{% endblock %}

@@ -1,0 +1,93 @@
+*{
+    --color1:#fafafa;
+}
+body{
+    background-color: var(--color1);
+    font-family: 'Roboto', sans-serif;
+}
+.contain{
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    ". rouge ."
+     "aqua rouge bleu"
+     "aqua jaune bleu"
+     ". jaune .";
+
+}
+h1{
+    text-align: center;
+    font-weight: lighter;
+    opacity: 0.5;
+    margin-bottom: 0px;
+    font-size: 1.9em;
+}
+h2{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0px;
+}
+h3{
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    opacity: 0.5;
+    margin: 10px 200px;
+}
+div p{
+    margin: 0px 50px 0px 0px;
+    text-align: justify;
+}
+.item{
+    background-color: white;
+    margin: 30px;
+    box-shadow: 2px 5px 10px rgb(192, 192, 192);
+    padding: 0px 0px 150px 30px;
+    border-radius: 5px;
+    
+}
+.item:nth-child(1){
+    border-top: 4px solid #73c2bd;
+    background: url(images/icon-supervisor.svg) no-repeat;
+    background-position: 90% 90%;
+    grid-area: aqua;
+}
+.item:nth-child(2){
+    border-top: 4px solid #b5696a;
+    background: url(images/icon-team-builder.svg) no-repeat;
+    background-position: 90% 90%;
+    grid-area: rouge;
+   
+}
+.item:nth-child(3){
+    border-top: 4px solid #6a9bbd;
+    background: url(images/icon-calculator.svg) no-repeat;
+    background-position: 90% 90%;
+    grid-area: bleu;
+}
+.item:nth-child(4){
+    border-top: 4px solid #e0b584;
+    background: url(images/icon-karma.svg) no-repeat;
+    background-position: 90% 90%;
+    grid-area: jaune;
+   
+}
+@media(max-width:990px){
+    .contain{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.item{
+    margin: 10px;
+}
+.item:nth-child(1), .item:nth-child(3){
+    margin: 10px;
+}
+p{
+    margin: 0px;
+}
+}

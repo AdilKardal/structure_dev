@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations{% endblock %}
+
+{% block body %}
+ {% include "accueil/header.html.twig" %}
+<h2>Cours</h2>
+    <select name="langages" id="langages">
+        <option value="">Langages</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="react">React</option>
+        <option value="PHP">PHP</option>
+        <option value="symfony">Symfony</option>
+    </select>
+
+    <section class="formations">
+        <article class="cards">
+            <div class="col vert"></div>
+            <div class="cour">
+                    <h4>COURS</h4>
+                    <p class="titre">Titre</p>
+                    <p>Synopsis</p>
+                </div>
+            
+        </article>
+
+        <article class="cards">
+            <div class="col orange"></div>
+            <div class="cour">
+                    <h4>COURS</h4>
+                    <p class="titre">Titre</p>
+                    <p>Synopsis</p>
+                </div>
+            
+        </article>
+
+        <article class="cards">
+            <div class="col rouge"></div>
+                <div class="cour">
+                    <h4>COURS</h4>
+                    <p class="titre">Titre</p>
+                    <p>Synopsis</p>
+                </div>
+            
+        </article>
+
+        <article class="cards">
+            <div class="col bleu"></div>
+            <div class="cour">
+                    <h4>COURS</h4>
+                    <p class="titre">Titre</p>
+                    <p>Synopsis</p>
+                </div>
+            
+        </article>
+
+        <article class="cards">
+            <div class="col blanc"></div>
+                <div class="cour">
+                    <h4>COURS</h4>
+                    <p class="titre">Titre</p>
+                    <p>Synopsis</p>
+                </div>
+            
+        </article>
+    </section>
+
+{% endblock %}
