@@ -17,7 +17,7 @@
 <body>
 <header>
 
-    <h1>Laia Créa </h1>
+    
 <?php include("view_header.php") ?>
 </header>
   <p class="best">Nos Best-Sellers...</p>
@@ -63,9 +63,7 @@
     </article>
 </section>
 
-<footer> 
-  <p> &copy; LaiaCréa  - 2023</p>
-</footer>
+<?php include("view_footer.php") ?>
 <script src="slider.js"></script>
 </body>
 </html>

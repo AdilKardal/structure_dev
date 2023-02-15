@@ -80,6 +80,22 @@ a {
     background-color: #3e8e41;
 }
 
+.btnconnect{
+    color: #3e8e41;
+    border: 2px solid #3e8e41;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btndeconnect{
+    color: red;
+}
+
+/*******************************CONNEXION**************************/
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 /**********************************SLIDER*************************/
 .best{
     font-size: 30px;

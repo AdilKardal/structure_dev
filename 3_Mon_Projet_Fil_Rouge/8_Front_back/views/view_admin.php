@@ -12,8 +12,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php include("./view_header.php") ?>
-<?php include("./view_footer.php") ?>
+<?php include("view_header.php") ?>
+<fieldset>
+        <legend>Ajout produit</legend>
+        <form method="post" action="../controllers/controller_admin.php" enctype="multipart/form-data">
+            <input type="hidden" name="form_insert" value="1">
+            <label>Nom:
+                <input type="text" name="nom_produit">
+            </label>
+            <br/>
+            <label>Description:
+                <input type="text" name="description_produit">
+            </label>
+            <br/>
+            <label>Prix:
+                <input type="number" name="prix_produit">
+            </label>
+            <br/>
+            <label>Image :
+                <input type="file" name="image_produit">
+            </label>
+            <br/>
+            <input type="submit" value="Ajouter">
+        </form>
+    </fieldset>
+
+<?php include("view_footer.php") ?>
     <script src="script.js"></script>
 </body>
 </html>
