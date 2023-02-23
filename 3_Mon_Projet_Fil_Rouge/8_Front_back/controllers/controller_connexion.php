@@ -1,8 +1,8 @@
 <?php
         // On inclut notre connecteur à la base de données
-        include("../models/connect.php");
+        require("../models/connect.php");
         // On inclut la vue à notre contrôleur
-        include("../views/view_connexion.php");
+        require("../views/view_connexion.php");
 
     if(!empty($_POST["form_connexion"])) {
         $select = $db->prepare("SELECT * FROM utilisateur WHERE email_utilisateur=:email_utilisateur;");

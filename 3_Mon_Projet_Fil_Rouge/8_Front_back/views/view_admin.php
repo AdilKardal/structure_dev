@@ -1,4 +1,4 @@
-<?php include("../models/connect.php");
+<?php require("../models/connect.php");
 // var_dump($_SESSION);die;
 ?>
 
@@ -10,12 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administration</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
 </head>
 <body>
-<?php include("view_header.php") ?>
+<?php require("view_header.php") ?>
 <fieldset>
         <legend>Ajout produit</legend>
-        <form method="post" action="../controllers/controller_admin.php" enctype="multipart/form-data">
+        <form class="ajoutproduit" method="post" action="../controllers/controller_admin.php" enctype="multipart/form-data">
             <input type="hidden" name="form_insert" value="1">
             <label>Nom:
                 <input type="text" name="nom_produit">
@@ -35,9 +37,9 @@
             <br/>
             <input type="submit" value="Ajouter">
         </form>
-    </fieldset>
+</fieldset>
 
-<?php include("view_footer.php") ?>
+<?php require("view_footer.php") ?>
     <script src="script.js"></script>
 </body>
 </html>

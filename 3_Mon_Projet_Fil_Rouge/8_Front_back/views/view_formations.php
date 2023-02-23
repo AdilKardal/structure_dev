@@ -1,4 +1,4 @@
-<?php include("../models/connect.php");
+<?php require("../models/connect.php");
 // var_dump($_SESSION);die;
 ?>
 
@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <?php include("./view_header.php") ?>
+    <?php require("./view_header.php") ?>
 
 
 
 
-    <?php include("./view_footer.php") ?>
+    <?php require("./view_footer.php") ?>
     <script src="script.js"></script>
 </body>
 

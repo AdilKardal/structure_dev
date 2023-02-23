@@ -1,8 +1,8 @@
 <?php
     // On inclut notre connecteur à la base de données
-    include("../models/connect.php");
+    require("../models/connect.php");
      // On inclut la vue à notre contrôleur
-     include("../views/view_inscription.php");
+     require("../views/view_connexion.php");
    
     // On entre dans la boucle seulement lors de l’envoi du formulaire
     if(!empty($_POST["form_inscription"])) {
@@ -35,5 +35,5 @@
             die('<p style=”color: red;”>Inscription échouée.</p><a href="../views/view_inscription.php">Réessayer.</a>');
         }
     }
-
+    header("Location:../views/view_accueil");
 ?>

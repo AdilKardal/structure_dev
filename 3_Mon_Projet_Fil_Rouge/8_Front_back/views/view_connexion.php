@@ -13,19 +13,19 @@
 <body>
   <section class="container">
       <article class="connect">
-        <h1>Connectez-vous</h1>
+        <h2>Connectez-vous</h2>
         <form action="../controllers/controller_connexion.php" method="post">
           <input type="hidden" name="form_connexion" value="1">
-          <label for="form_email">E-mail</label>
-          <input type="email" name="form_email" required>
-          <label for="form_password">Mot de passe</label>
-          <input type="password" name="form_password">
+          <!-- <label for="form_email">E-mail</label> -->
+          <input type="email" name="form_email" required placeholder="E-mail">
+          <!-- <label for="form_password">Mot de passe</label> -->
+          <input type="password" name="form_password" placeholder="Mot de passe">
           <input type="submit" value="Se connecter" id="btnconnect">
         </form>
       </article>
     
     <article class="inscription">
-      <p>Pas encore inscrit ? <a href="../views/view_inscription.php">Inscrivez-vous</a></p>
+      <h2>Pas encore inscrit ? Inscrivez-vous</h2>
         <form action="../controllers/controller_inscription.php" method="post" enctype="multipart/form-data">
           <input type="hidden" name="form_inscription" value="1">
           <input type="text" name="form_nom" placeholder="Nom">
@@ -43,7 +43,6 @@
     
   </section>
 <a href="view_accueil.php">Retour</a>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 
 </html>

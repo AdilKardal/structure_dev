@@ -1,5 +1,5 @@
 <?php
-    include("../models/connect.php");
+    require("../models/connect.php");
 
     // Comme dans la page d'index, sauf qu'ici c'est forcé
     session_destroy();

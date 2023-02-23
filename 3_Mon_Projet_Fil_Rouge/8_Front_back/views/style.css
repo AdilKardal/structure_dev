@@ -4,10 +4,14 @@
 }
 
 @font-face {
-    font-family: "laia";
+    font-family: "corinthia";
     src: url("./fonts/Corinthia-Regular.ttf");
 }
 
+@font-face {
+    font-family: "economica";
+    src: url("./fonts/Economica-Regular.ttf");
+}
 /****************************HEADER*************************/
 body {
     margin: 0px;
@@ -18,10 +22,10 @@ header {
     border-bottom: 1px solid black;
 }
 
-h1 {
+.titre {
     display: flex;
     flex-direction: column;
-    font-family: "laia";
+    font-family: "corinthia";
     font-size: 6em;
     font-weight: lighter;
     text-align: center;
@@ -36,10 +40,10 @@ nav {
 }
 a {
     text-decoration: none;
-    color: var(--color2);
+    color: black;
+    font-family: "economica";
     margin: 0px 50px;
-    font-size: larger;
-    text-shadow: 1px 1px 1px black;
+    font-size: 25px;
 }
 
 .dropbtn {
@@ -84,10 +88,15 @@ a {
     color: #3e8e41;
     border: 2px solid #3e8e41;
     border-radius: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px 5px;
+    font-family: "economica";
 }
 .btndeconnect{
     color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 0px 5px;
+    font-family: "economica";
 }
 
 /*******************************CONNEXION**************************/
@@ -95,13 +104,43 @@ a {
     display:flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color1);
+}
+.container input{
+    border-radius: 5px;
+    margin: 2%;
+}
+.container form{
+    background-color: var(--color1);
+    border: solid 1px #fab1ab;
+}
+.connect{
+width: 50%;
+border-radius: 20px;
+align-items: center;
+display: flex;
+flex-direction: column;
+}
+
+.inscription{
+width: 50%;
+border-radius: 20px;
+
+}
+.container h2{
+text-align: center;
+font-family: "economica";
+font-size: 30px;
 }
 /**********************************SLIDER*************************/
-.best{
+/* .best{
     font-size: 30px;
     margin-left: 2%;
     margin-bottom: 0;
-}
+} */
 
 #slider {
     position: relative;
@@ -111,6 +150,7 @@ a {
     align-items: center;
    justify-content: center;
    border: 1px solid rgba(0, 0, 0, 0.055);
+   margin-top: 2%;
 }
 
 #precedent,
@@ -139,7 +179,7 @@ a {
 
 /**********************************CATEGORIES**********************/
 .cat p{
-    font-family: 'laia';
+    font-family: 'economica';
     font-size: 40px;
     text-shadow: 2px ;
 }
@@ -174,6 +214,14 @@ input{
     padding: 4%;
     background-color: blue;
 } */
+
+/********************************CRUD*************************/
+.ajoutproduit input{
+    width: 50%;
+    border-radius: 5px;
+    margin: 2%;
+    padding: 2%;
+}
 /***************************FOOTER******************/
 footer{
     background-color: var(--color1);
