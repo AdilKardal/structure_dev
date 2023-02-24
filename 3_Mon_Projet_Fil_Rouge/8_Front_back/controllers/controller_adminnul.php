@@ -1,10 +1,11 @@
 <?php
-include_once('../models/connect.php');
+require("../views/view_admin.php");
+// On entre dans la boucle seulement lors de l’envoi du formulaire
 
-$color = "transparent; display: none;";
-$message = "";
+//create
 
-if (!empty($_POST['form_insert'])) {
+if (!empty($_POST["form_insert"])) {
+    // On recherche si le nom de l'aticle existe déjà en BDD
     $select = $db->prepare("SELECT nom_produit FROM produit WHERE nom_produit=:nom_produit;");
     $select->bindParam(":nom_produit", $_POST["nom_produit"]);
     $select->execute();
@@ -14,7 +15,7 @@ if (!empty($_POST['form_insert'])) {
             // Stocke le chemin et le nom temporaire du fichier importé (ex /tmp/125423.pdf)
             $tmpName = $_FILES['image_produit']['tmp_name'];
             // Stocke le nom du fichier (nom du fichier et son extension importé ex : test.jpg)
-            $name = $_FILES['image_produit']['name'];
+            $name = $_FILES['file']['name'];
 
             if (!in_array(substr(strrchr($_FILES['image_produit']['name'], '.'), 1), $extensions_ok)) {
             } else {
@@ -32,38 +33,51 @@ if (!empty($_POST['form_insert'])) {
             }
         }
     }
+} 
 
-    $color = "green;";
-    $message = "Insertion effectuée";
-    // UPDATE 
-} elseif (!empty($_POST['form_update'])) {
-    $sql = 'UPDATE produit 
-            SET nom-produit=:nom-produit, 
-                description_produit=:description_produit, 
-                prix_produit=:prix_produit ';
-    $sql .= ' WHERE id_produit=:id_produit;';
+//read 
+
+if(empty($_GET['id'])) {
+    die("Veuillez choisir un utilisateur valide à éditer");
+}elseif(!empty($_POST['form_update'])) {
+    $sql = 'UPDATE utilisateur
+            SET nom_utilisateur=:nom_utilisateur,
+                prenom_utilisateur=:prenom_utilisateur,
+                email_utilisateur=:email_utilisateur ';
+    if (!empty($_POST['mdp_utilisateur'])) {
+        $sql .= ', mdp_utilisateur=:mdp_utilisateur ';
+    }
+    $sql .= ' WHERE id_utilisateur=:id_utilisateur;';
     $req = $db->prepare($sql);
-    $req->bindParam(":nom-produit", $_POST['nom-produit']);
-    $req->bindParam(":description_produit", $_POST['description_produit']);
-    $req->bindParam(":prix_produit", $_POST['prix_produit']);
-    $req->bindParam(":image_produit", $_FILES['image_produit']['name']);
-    $req->bindParam(":id_produit", $_POST['id_produit']);
+    $req->bindParam(":nom_utilisateur", $_POST['nom_utilisateur']);
+    $req->bindParam(":prenom_utilisateur", $_POST['prenom_utilisateur']);
+    $req->bindParam(":email_utilisateur", $_POST['email_utilisateur']);
+    if (!empty($_POST['mdp_utilisateur'])) {
+        $mdp_utilisateur = password_hash($_POST['mdp_utilisateur'], PASSWORD_BCRYPT);
+        $req->bindParam(":mdp_utilisateur", $utilisateur_mdp);
+    }
+    $req->bindParam(":id_utilisateur", $_POST['id_utilisateur']);
     $req->execute();
 
     $color = "orange;";
     $message = "Mise à jour effectuée";
-    // DELETE 
-} elseif (!empty($_POST['form_delete'])) {
-    $sql = 'DELETE FROM produit WHERE id_produit=:id_produit;';
-    $req = $db->prepare($sql);
-    $req->bindParam(":id_produit", $_POST['id_produit']);
-    $req->execute();
 
+
+$req = $db->prepare("SELECT * FROM utilisateur WHERE id_utilisateur=:id_utilisateur;");
+$req->bindParam(":id_utilisateur", $_GET['id']);
+$req->execute();
+$utilisateur = $req->fetch(PDO::FETCH_ASSOC);
+}
+//delete
+
+elseif(!empty($_POST['form_delete'])) {
+    $sql = 'DELETE FROM utilisateurs WHERE utilisateur_id=:id_utilisateur;';
+    $req = $db->prepare($sql);
+    $req->bindParam(":id_utilisateur", $_POST['utilisateur_id']);
+    $req->execute();
+   
     $color = "red;";
     $message = "Suppression effectuée";
 }
 
-$produits = $db->query('SELECT * FROM produit')->fetchAll();
-
 header("Location:../views/view_admin");
-?>
