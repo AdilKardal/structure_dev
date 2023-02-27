@@ -17,6 +17,8 @@ if (!empty($_POST['form_insert'])) {
             $name = $_FILES['image_produit']['name'];
 
             if (!in_array(substr(strrchr($_FILES['image_produit']['name'], '.'), 1), $extensions_ok)) {
+                $color = "red";
+                $message = "Extension non autorisée";
             } else {
                 // Si ce n'est pas le cas, on vient l'ajouter avec une requête INSERT 
                 $insert = $db->prepare("INSERT INTO produit(nom_produit, description_produit, prix_produit, image_produit)
@@ -38,16 +40,20 @@ if (!empty($_POST['form_insert'])) {
     // UPDATE 
 } elseif (!empty($_POST['form_update'])) {
     $sql = 'UPDATE produit 
-            SET nom-produit=:nom-produit, 
+            SET nom_produit=:nom_produit, 
                 description_produit=:description_produit, 
-                prix_produit=:prix_produit ';
+                prix_produit=:prix_produit,
+                image_produit=:image_produit ';
     $sql .= ' WHERE id_produit=:id_produit;';
     $req = $db->prepare($sql);
-    $req->bindParam(":nom-produit", $_POST['nom-produit']);
+    $req->bindParam(":nom_produit", $_POST['nom_produit']);
     $req->bindParam(":description_produit", $_POST['description_produit']);
     $req->bindParam(":prix_produit", $_POST['prix_produit']);
     $req->bindParam(":image_produit", $_FILES['image_produit']['name']);
     $req->bindParam(":id_produit", $_POST['id_produit']);
+    if ($req->execute()) {
+        $fichier = move_uploaded_file($tmpName, "../views/imgproduit/" . $name);
+    }
     $req->execute();
 
     $color = "orange;";
@@ -66,4 +72,3 @@ if (!empty($_POST['form_insert'])) {
 $produits = $db->query('SELECT * FROM produit')->fetchAll();
 
 header("Location:../views/view_admin");
-?>
