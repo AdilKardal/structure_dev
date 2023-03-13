@@ -11,6 +11,8 @@
 </head>
 
 <body>
+<?php require("view_header.php") ?>
+
   <section class="container">
       <article class="connect">
         <h2>Connectez-vous</h2>
@@ -43,6 +45,8 @@
     
   </section>
 <a href="view_accueil.php">Retour</a>
+<?php require("view_footer.php") ?>
+
 </body>
 
 </html>

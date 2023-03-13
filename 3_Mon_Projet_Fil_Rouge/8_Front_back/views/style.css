@@ -196,6 +196,27 @@ justify-content: space-around;
 .cat img:hover{
     transform: scale(1.2) ;
 }
+/***************************************PRODUIT***************************************/
+.sectionproduit{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #614436;
+    height: auto;
+    width: 70%;
+    margin: auto;
+}
+.produit{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: rgb(223, 209, 226);
+    height: auto;
+    text-align: center;
+    margin: auto;
+}
+.addcart{
+    display: inline;
+}
 /***************************************FORM********************************************/
 
 form{
