@@ -218,17 +218,42 @@ justify-content: space-around;
     display: inline;
 }
 /***************************************FORM********************************************/
-
+/* .form{
+    padding: 2cm;
+    color: white;
+    width: 50%;
+}
+input, select{
+    border-radius: 5px;
+    border: none;
+    padding: 7px;
+    margin: 10px 0px;
+  }
 form{
     display: flex;
-    width: 55%;
     margin: auto;
+    justify-content: center;
     flex-direction: column;
     background-color: var(--color1);
 }
-input{
-    border-radius: 10px;
-}
+
+textarea{
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    resize: none;
+  }
+  
+  .submit{
+    width: 30%;
+    background-color: #ffffff;
+    color: #5a3030;
+    font-weight: bold;
+    align-self: center;
+    cursor: pointer;
+  } */
+
 /* .formcontain{
     width: 70%;
     margin: auto;
@@ -236,13 +261,13 @@ input{
     background-color: blue;
 } */
 
-/********************************CRUD*************************/
-.ajoutproduit input{
+/********************************CRUD****************************/
+/* .ajoutproduit input{
     width: 50%;
     border-radius: 5px;
     margin: 2%;
     padding: 2%;
-}
+} */
 /***************************FOOTER******************/
 footer{
     background-color: var(--color1);

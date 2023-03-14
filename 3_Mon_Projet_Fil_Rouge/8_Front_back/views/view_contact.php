@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <?php require("./view_header.php") ?>
+    <article class="formcontact">
+        <form action="envoyer.php" method="post">
+            <input type="text" id="nom" name="nom" placeholder="Nom*" required>
+
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom*" required>
+
+            <input type="email" id="email" name="email" placeholder="E-mail*" required>
+
+            <input type="tel" id="tel" name="tel" placeholder="Téléphone">
+
+            <select id="motif" name="motif" required>
+                <option value="">Sélectionner un motif *</option>
+                <option value="Demande d'informations">Demande d'informations</option>
+                <option value="Rendez-vous">Rendez-vous</option>
+                <option value="Devis">Devis</option>
+
+                <option value="Autre">Autre</option>
+            </select>
+
+            <textarea id="message" name="message" placeholder="Votre message...*"></textarea>
+
+            <input class="submit" type="submit" value="ENVOYER">
+        </form>
+    </article>
+    <?php require("./view_footer.php") ?>
+</body>
+
+</html>

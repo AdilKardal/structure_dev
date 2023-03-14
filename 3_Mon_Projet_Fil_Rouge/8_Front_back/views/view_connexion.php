@@ -8,13 +8,15 @@
   <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
   <title>Connexion</title>
   <link rel="stylesheet" href="style.css?v=<?= date("H:i:s") ?>">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
 </head>
 
 <body>
 <?php require("view_header.php") ?>
 
-  <section class="container">
-      <article class="connect">
+  <section class="containerconnexion">
+      <article class="formconnect">
         <h2>Connectez-vous</h2>
         <form action="../controllers/controller_connexion.php" method="post">
           <input type="hidden" name="form_connexion" value="1">
@@ -26,7 +28,7 @@
         </form>
       </article>
     
-    <article class="inscription">
+    <article class="forminscription">
       <h2>Pas encore inscrit ? Inscrivez-vous</h2>
         <form action="../controllers/controller_inscription.php" method="post" enctype="multipart/form-data">
           <input type="hidden" name="form_inscription" value="1">
@@ -44,7 +46,6 @@
     </article>
     
   </section>
-<a href="view_accueil.php">Retour</a>
 <?php require("view_footer.php") ?>
 
 </body>

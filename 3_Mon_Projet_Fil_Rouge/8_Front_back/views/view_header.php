@@ -17,7 +17,7 @@
       </div>
       <a href="#">Personnalisation</a>
       <a href="#">Profil</a>
-      <a href="#">Contact</a>
+      <a href="view_contact.php">Contact</a>
     <?php
     if (isset($_SESSION['user']) && $_SESSION['user'] !== null && $_SESSION['user']['id_role_utilisateur'] == 2) { ?>
       <a href="view_admin.php">Admin</a>
