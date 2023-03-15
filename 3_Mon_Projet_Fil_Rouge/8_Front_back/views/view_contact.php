@@ -12,8 +12,8 @@
 
 <body>
     <?php require("./view_header.php") ?>
-    <article class="formcontact">
-        <form action="envoyer.php" method="post">
+   
+        <form class="formcontact" action="envoyer.php" method="post">
             <input type="text" id="nom" name="nom" placeholder="Nom*" required>
 
             <input type="text" id="prenom" name="prenom" placeholder="Prénom*" required>
@@ -35,7 +35,7 @@
 
             <input class="submit" type="submit" value="ENVOYER">
         </form>
-    </article>
+        
     <?php require("./view_footer.php") ?>
 </body>
 
