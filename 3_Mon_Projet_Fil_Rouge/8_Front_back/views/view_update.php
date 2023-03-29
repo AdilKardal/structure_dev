@@ -9,7 +9,7 @@ $produit = $req->fetch();
 
 <fieldset>
     <legend>Update</legend>
-    <form class="" method="post" action="../controllers/controller_admin.php">
+    <form class="" method="post" action="../controllers/controller_admin.php" enctype="multipart/form-data">
         <input type="hidden" name="form_update" value="1">
         <input type="hidden" name="id_produit" value="<?=$produit['id_produit']?>">
         <label>Nom:

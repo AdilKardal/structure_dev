@@ -1,10 +1,11 @@
 <?php
 include_once('../models/connect.php');
 
-$color = "transparent; display: none;";
-$message = "";
+
 
 if (!empty($_POST['form_insert'])) {
+    $color = "transparent; display: none;";
+    $message = "";
     $select = $db->prepare("SELECT nom_produit FROM produit WHERE nom_produit=:nom_produit;");
     $select->bindParam(":nom_produit", $_POST["nom_produit"]);
     $select->execute();
@@ -39,6 +40,7 @@ if (!empty($_POST['form_insert'])) {
     $message = "Insertion effectuée";
     // UPDATE 
 } elseif (!empty($_POST['form_update'])) {
+    // var_dump($_FILES);die;
     $sql = 'UPDATE produit 
             SET nom_produit=:nom_produit, 
                 description_produit=:description_produit, 
@@ -50,6 +52,9 @@ if (!empty($_POST['form_insert'])) {
     $req->bindParam(":description_produit", $_POST['description_produit']);
     $req->bindParam(":prix_produit", $_POST['prix_produit']);
     $req->bindParam(":image_produit", $_FILES['image_produit']['name']);
+    if (empty($_FILES)) {
+        $req->bindParam(":image_produit", $_FILES['image_produit']['name']);
+    }
     $req->bindParam(":id_produit", $_POST['id_produit']);
     if ($req->execute()) {
         $fichier = move_uploaded_file($tmpName, "../views/imgproduit/" . $name);

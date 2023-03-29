@@ -14,8 +14,9 @@
       rel="stylesheet">
 </head>
 <body>
-<?php require("view_header.php") ?>
-
+<?php require("view_header.php");
+    $color = "transparent; display: none;";
+    $message = "";?>
 <!-- CREATE -->
 <fieldset>
         <legend>Ajout produit</legend>
@@ -49,6 +50,7 @@
      if(empty($produits)) { ?>
         <p>Aucun produit n'est ajouté</p>
     <?php } else { ?>
+        <h2 class="tableauproduits">Produits</h2>
   <table>
             <thead>
                 <tr>
@@ -56,7 +58,7 @@
                     <td>Description</td>
                     <td>Prix</td>
                     <td>Image</td>
-                    <td>Edition</td>
+                    <td>Mise à jour</td>
                     <td>Suppression</td>
                 </tr>
             </thead>
@@ -68,10 +70,10 @@
                     <td><?=$produit['prix_produit']?></td>
                     <td><?=$produit['image_produit']?></td>
                     <td>
-                        <a href="view_update.php?id=<?=$produit['id_produit']?>">Editer</a>&nbsp;
+                        <a href="view_update.php?id=<?=$produit['id_produit']?>">Editer</a>
                     </td>
                     <td>
-                        <form method="POST">
+                        <form method="POST" action="../controllers/controller_admin.php">
                             <input type="hidden" name="form_delete" value="1">
                             <input type="hidden" name="id_produit" value="<?=$produit['id_produit']?>">
                             <button type="submit">Supprimer</button>

@@ -25,9 +25,8 @@
             <select id="motif" name="motif" required>
                 <option value="">Sélectionner un motif *</option>
                 <option value="Demande d'informations">Demande d'informations</option>
-                <option value="Rendez-vous">Rendez-vous</option>
+                <option value="Evenements">Evenements</option>
                 <option value="Devis">Devis</option>
-
                 <option value="Autre">Autre</option>
             </select>
 
