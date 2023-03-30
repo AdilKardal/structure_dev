@@ -1,10 +1,10 @@
 let image = document.querySelector("#slide");
 
 //On déclare un tableau d'images 
-let arrayImg = ["images/bebe.webp", "images/bougie.webp","images/passeport.webp", "images/voyage.webp"];
+let arrayImg = ["images/passport_avion.jpeg", "images/lit_wedd.jpeg","images/voyage.webp"];
 let numero = 0;
 // La fonction ChangeSlide permet de changer le sens du caroussel
-function ChangeSlide(sens) {
+function changeSlide(sens) {
     numero = numero + sens;
     if (numero < 0){
         numero = arrayImg.length - 1;
@@ -15,5 +15,5 @@ function ChangeSlide(sens) {
     image.src = arrayImg[numero];
     
 }
-// La méthode setInterval appelle la fonction ChangeSlide toutes les 2.5s
-setInterval("ChangeSlide(1)", 2500);
+// La méthode setInterval appelle la fonction changeSlide toutes les 2.5s
+// setInterval("changeSlide(1)", 2500);

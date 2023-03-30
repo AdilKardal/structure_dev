@@ -1,6 +1,7 @@
 * {
-    --color1: #fcf6f6;
-    --color2: #fab1ab;
+    --color1: #f7f3ee;
+    --color2: #6b5947;
+    --color3 : #f5d4d2;
 }
 
 @font-face {
@@ -20,19 +21,8 @@ body {
 }
 header {
     background: var(--color1);
-    border-bottom: 1px solid black;
-}
-
-.titre {
-    display: flex;
-    flex-direction: column;
-    font-family: "corinthia";
-    font-size: 6em;
-    font-weight: lighter;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    color: black;
+    border-bottom: 1px solid var(--color2);
+    box-shadow: 1px 3px 8px var(--color2);
 }
 
 nav {
@@ -182,9 +172,11 @@ font-size: 30px;
 .cat p{
     font-family: 'economica';
     font-size: 40px;
-    text-shadow: 2px ;
+    margin: 0;
+    z-index: 100;
 }
 .cat{
+    margin: 1%;
 padding-top: 10px;
 display: flex;
 text-align: center;
@@ -192,31 +184,30 @@ justify-content: space-around;
 }
 
 .cat img{
+    z-index: 2;
     border-radius: 50%;
+    transition: transform .1s;
 }
 .cat img:hover{
-    transform: scale(1.2) ;
+    transform: scale(1.1) ;
 }
 /***************************************PRODUIT***************************************/
 .sectionproduit{
     display: flex;
     flex-wrap: wrap;
-    background-color: #614436;
+    background-color: var(--color2);
     height: auto;
     width: 70%;
-    margin: auto;
+    margin:2% auto;
 }
 .produit{
     display: flex;
     flex-direction: column;
     width: 30%;
-    background-color: rgb(223, 209, 226);
+    background-color: var(--color1);
     height: auto;
     text-align: center;
-    margin: auto;
-}
-.addcart{
-    display: inline;
+    margin: 1% auto;
 }
 
 /********************************************ADMIN****************************************/
@@ -234,7 +225,7 @@ td{
         display: flex;
         flex-direction: column;
         margin: 6% 10%;
-        background: #e6dad9;
+        background: var(--color2);
         padding: 20px;
     }
     .formcontact input, .formcontact textarea, .formcontact select{
@@ -253,8 +244,8 @@ td{
     .formcontact input[type="submit"]{
         width: 10%;
         align-self: center;
-        background-color: #614436;
-        color: #e6dad9;
+        background-color: var(--color1);
+        color: var(--color2);
         font-weight: bold;
         cursor: pointer;
     }
@@ -266,9 +257,12 @@ td{
 footer{
     background-color: var(--color1);
     text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
     font-size: 20px;
     padding: 30px;
+    /* border-top:1px solid var(--color2) ;
+    box-shadow: 1px 3px 8px var(--color2); */
 }
