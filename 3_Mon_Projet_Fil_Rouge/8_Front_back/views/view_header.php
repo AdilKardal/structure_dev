@@ -4,16 +4,7 @@
 <header>
   <nav>
     <a href="view_accueil.php">Accueil</a>
-    <div class="dropdown">
-      <a href="#">Nos coffrets<span class="material-icons-outlined">
-          expand_more
-        </span></a>
-      <div class="dropdown-content">
-        <a href="#">Mariages</a>
-        <a href="view_naissance.php">Naissances</a>
-        <a href="#">Voyage</a>
-      </div>
-    </div>
+    <a href="view_coffret.php">Nos coffrets</a>
     <a href="#">Personnalisation</a>
     <a href="view_accueil.php"><img src="images/laia_logo_arche.jpeg" alt="" width="150" height="100"></a>
     <a href="#">Profil</a>

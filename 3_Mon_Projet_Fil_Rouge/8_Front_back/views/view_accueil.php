@@ -16,11 +16,11 @@
 </head>
 
 <body>
-  <header>
 
 
-    <?php require("view_header.php") ?>
-  </header>
+
+  <?php require("view_header.php") ?>
+
   <!-- <p class="best">Nos Coffrets</p> -->
 
   <div id="slider">
@@ -30,7 +30,7 @@
     <span id="precedent" onclick="changeSlide(-1)" class="material-icons-outlined">chevron_left</span>
     <span id="suivant" onclick="changeSlide(1)" class="material-icons-outlined">chevron_right</span>
   </div>
-  <div class="txt">"Transformez vos souvenirs en œuvres d'art personnalisées avec notre site de personnalisation d'objets. Des mariages aux naissances en passant par les voyages et la décoration intérieure, créez des pièces uniques qui reflètent votre style et vos moments les plus précieux."</div>
+  <div class="textacc">"Transformez vos souvenirs en œuvres d'art personnalisées avec notre site de personnalisation d'objets. Des mariages aux naissances en passant par les voyages et la décoration intérieure, créez des pièces uniques qui reflètent votre style et vos moments les plus précieux."</div>
   <section class="contain">
     <article class="cat">
 

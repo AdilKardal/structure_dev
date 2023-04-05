@@ -1,130 +1,136 @@
 * {
-    --color1: #f7f3ee;
-    --color2: #6b5947;
-    --color3 : #f5d4d2;
+  --color1: #f7f3ee;
+  --color2: #6b5947;
+  --color3: #f5d4d2;
 }
 
 @font-face {
-    font-family: "corinthia";
-    src: url("./fonts/Corinthia-Regular.ttf");
+  font-family: "corinthia";
+  src: url("./fonts/Corinthia-Regular.ttf");
 }
 
 @font-face {
-    font-family: "economica";
-    src: url("./fonts/Economica-Regular.ttf");
+  font-family: "economica";
+  src: url("./fonts/Economica-Regular.ttf");
 }
 /****************************HEADER*************************/
 body {
-    margin: 0;
-    height: 100vh;
-    /* background-color: var(--color1); */
+  margin: 0;
+  height: 100vh;
+  /* background-color: var(--color1); */
 }
 header {
-    background: var(--color1);
-    border-bottom: 1px solid var(--color2);
-    box-shadow: 1px 3px 8px var(--color2);
+  background: var(--color1);
+  border-bottom: 1px solid var(--color2);
+  box-shadow: 1px 3px 8px var(--color2);
+  margin-bottom: 2%;
 }
 
 nav {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 a {
-    text-decoration: none;
-    color: black;
-    font-family: "economica";
-    margin: 0px 50px;
-    font-size: 25px;
+  text-decoration: none;
+  color: black;
+  font-family: "economica";
+  margin: 0px 50px;
+  font-size: 25px;
 }
 
 .dropbtn {
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
-    text-decoration: none;
-    display: inline;
+  text-decoration: none;
+  display: inline;
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.089);
+  background-color: rgba(255, 255, 255, 0.089);
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+  background-color: #3e8e41;
 }
 
-.btnconnect{
-    color: #3e8e41;
-    border: 2px solid #3e8e41;
-    border-radius: 5px;
-    padding: 0px 5px;
-    font-family: "economica";
+.btnconnect {
+  color: #3e8e41;
+  border: 2px solid #3e8e41;
+  border-radius: 5px;
+  padding: 0px 5px;
+  font-family: "economica";
 }
-.btndeconnect{
-    color: red;
-    border: 2px solid red;
-    border-radius: 5px;
-    padding: 0px 5px;
-    font-family: "economica";
+.btndeconnect {
+  color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 0px 5px;
+  font-family: "economica";
 }
 
 /*******************************CONNEXION**************************/
-.container{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    border-radius: 10px;
-    background-color: var(--color1);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--color1);
 }
-.container input{
-    border-radius: 5px;
-    margin: 2%;
+.container input {
+  border-radius: 5px;
+  margin: 2%;
 }
-.container form{
-    background-color: var(--color1);
-    border: solid 1px #fab1ab;
+.container form {
+  background-color: var(--color1);
+  border: solid 1px #fab1ab;
 }
-.connect{
-width: 50%;
-border-radius: 20px;
-align-items: center;
-display: flex;
-flex-direction: column;
+.connect {
+  width: 50%;
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.inscription{
-width: 50%;
-border-radius: 20px;
-
+.inscription {
+  width: 50%;
+  border-radius: 20px;
 }
-.container h2{
-text-align: center;
-font-family: "economica";
-font-size: 30px;
+.container h2 {
+  text-align: center;
+  font-family: "economica";
+  font-size: 30px;
+}
+/******************************************************************ACCUEIL*************************************************/
+.textacc{
+  width: 50%;
+  font-size: 30px;
+  font-family: "economica";
 }
 /**********************************SLIDER*************************/
 /* .best{
@@ -134,135 +140,187 @@ font-size: 30px;
 } */
 
 #slider {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-   justify-content: center;
-   border: 1px solid rgba(0, 0, 0, 0.055);
-   margin-top: 2%;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.055);
+  margin-top: 2%;
 }
 
 #precedent,
 #suivant {
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    position: absolute;
-    font-size: 100px;
-    color: rgba(0, 0, 0, 0.61);
-    padding: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.61);
+  padding: 10px;
 }
 
 #precedent {
-    left: 0;
+  left: 0;
 }
 
 #suivant {
-    right: 0;
+  right: 0;
 }
 
 #slider:hover #precedent,
 #slider:hover #suivant {
+  opacity: 1;
+}
+/******************************COFFRETS******************************/
+.containcatcoffret {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  align-items: center;
+  gap: 50px;
+  margin-top: 1%;
+}
+.coffretmar,
+.coffretnai,
+.coffretvoy {
+  border-radius: 5px;
+  height: 450px;
+  background-color: #3e8e41;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  font-size: 50px;
+  opacity: 0.7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+.coffretmar:hover,
+.coffretnai:hover,
+.coffretvoy:hover{
+    transition: opacity 0.8s ease;
     opacity: 1;
 }
 
-/**********************************CATEGORIES**********************/
-.cat p{
-    font-family: 'economica';
-    font-size: 40px;
-    margin: 0;
-    z-index: 100;
-}
-.cat{
-    margin: 1%;
-padding-top: 10px;
-display: flex;
-text-align: center;
-justify-content: space-around;
+.coffretmar{
+background: url("images/lit_wedd.jpeg") no-repeat;
+background-size: cover;
 }
 
-.cat img{
-    z-index: 2;
-    border-radius: 50%;
-    transition: transform .1s;
+.coffretnai{
+    background: url("images/baby_deco.jpg");
+    background-size: cover;
 }
-.cat img:hover{
-    transform: scale(1.1) ;
+.coffretvoy{
+    background: url("images/passport_avion.jpeg");
+    background-size: cover;
+}
+/**********************************CATEGORIES**********************/
+.cat p {
+  font-family: "economica";
+  font-size: 40px;
+  margin: 0;
+  z-index: 100;
+}
+.cat {
+  margin: 1%;
+  padding-top: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.cat img {
+  z-index: 2;
+  border-radius: 50%;
+  transition: transform 0.1s;
+}
+.cat img:hover {
+  transform: scale(1.1);
 }
 /***************************************PRODUIT***************************************/
-.sectionproduit{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--color2);
-    height: auto;
-    width: 70%;
-    margin:2% auto;
+.sectionproduit {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color2);
+  height: auto;
+  width: 70%;
+  margin: 2% auto;
 }
-.produit{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    background-color: var(--color1);
-    height: auto;
-    text-align: center;
-    margin: 1% auto;
-}
-
-/********************************************ADMIN****************************************/
-table{
-    border: 3px solid black;
+.produit {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: var(--color1);
+  height: auto;
+  text-align: center;
+  margin: 1% auto;
 }
 
-td{
-    border: 1px solid black;
-    text-align: center;
+/*****************************************************************************ADMIN*************************************************************/
+table {
+  border: 3px solid black;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
 }
 /***************************************FORMULAIRES********************************************/
-    /******************Contact*************/
-    .formcontact{
-        display: flex;
-        flex-direction: column;
-        margin: 6% 10%;
-        background: var(--color2);
-        padding: 20px;
-    }
-    .formcontact input, .formcontact textarea, .formcontact select{
-        padding: 5px;
-        border-radius: 5px;
-        margin: auto;
-        padding: 5px;
-        margin-bottom: 1%;
-        width: 70%;
-        align-items: center;
-    }
-    .formcontact textarea{
-        resize: none;
-        height: 100px;
-    }
-    .formcontact input[type="submit"]{
-        width: 10%;
-        align-self: center;
-        background-color: var(--color1);
-        color: var(--color2);
-        font-weight: bold;
-        cursor: pointer;
-    }
-    /******************Connexion Inscription******************/
-    .containerconnexion{
-        display: flex;
-    }
+/******************Contact*************/
+.formcontact {
+  display: flex;
+  flex-direction: column;
+  margin: 6% 10%;
+  background: var(--color2);
+  padding: 20px;
+}
+.formcontact input,
+.formcontact textarea,
+.formcontact select {
+  padding: 5px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 5px;
+  margin-bottom: 1%;
+  width: 70%;
+  align-items: center;
+}
+.formcontact textarea {
+  resize: none;
+  height: 100px;
+}
+.formcontact input[type="submit"] {
+  width: 10%;
+  align-self: center;
+  background-color: var(--color1);
+  color: var(--color2);
+  font-weight: bold;
+  cursor: pointer;
+}
+/******************Connexion Inscription******************/
+.containerconnexion {
+  display: flex;
+}
 /***************************FOOTER******************/
-footer{
-    background-color: var(--color1);
-    text-align: center;
-    position: fixed;
+footer {
+  background-color: var(--color1);
+  text-align: center;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-    font-size: 20px;
-    padding: 30px;
-    /* border-top:1px solid var(--color2) ;
+  font-size: 20px;
+  padding: 30px;
+  /* border-top:1px solid var(--color2) ;
     box-shadow: 1px 3px 8px var(--color2); */
 }
+
+.containproduct{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
