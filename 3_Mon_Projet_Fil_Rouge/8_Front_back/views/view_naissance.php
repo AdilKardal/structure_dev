@@ -17,55 +17,7 @@
 <body>
     <?php require("./view_header.php") ?>
 
-    <section class="sectionproduit">
-        <article class="produit">
-            <img src="images/58348_347_passport.jpg" alt="">
-            <h4>Passeport</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae hic iure eveniet, repellat tenetur similique.</p>
-            <li>dfhdfhdfhdf</li>
-            <li>ffdghfhff</li>
-            <li>fngdttgff</li>
-            <li>ssjuigghh</li>
-            <div class="addcart">
-                <p>25.99€</p>
-                <button>Personnaliser</button>
-            </div>
-        </article>
-        <article class="produit">
-            <img src="images/58348_347_passport.jpg" alt="">
-            <h4>Passeport</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae hic iure eveniet, repellat tenetur similique.</p>
-            <li>dfhdfhdfhdf</li>
-            <li>ffdghfhff</li>
-            <li>fngdttgff</li>
-            <li>ssjuigghh</li>
-            <div class="addcart">
-                <p>25.99€</p>
-                <button>Personnaliser</button>
-            </div>
-        </article>
-        <article class="produit">
-            <img src="images/58348_347_passport.jpg" alt="">
-            <h4>Passeport</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae hic iure eveniet, repellat tenetur similique.</p>
-            <li>dfhdfhdfhdf</li>
-            <li>ffdghfhff</li>
-            <li>fngdttgff</li>
-            <li>ssjuigghh</li>
-            <div class="addcart">
-                <p>25.99€</p>
-                <button>Personnaliser</button>
-            </div>
-        </article>
-
-        <article class="produit">
-
-        </article>
-        <article class="produit">
-
-        </article>
-    </section>
-
+   
 
     <?php require("./view_footer.php") ?>
     <script src="script.js"></script>

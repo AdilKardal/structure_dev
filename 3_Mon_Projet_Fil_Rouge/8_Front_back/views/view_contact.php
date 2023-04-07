@@ -13,7 +13,7 @@
 <body>
     <?php require("./view_header.php") ?>
    
-        <form class="formcontact" action="envoyer.php" method="post">
+        <form class="formcontact"  method="post">
             <input type="text" id="nom" name="nom" placeholder="Nom*" required>
 
             <input type="text" id="prenom" name="prenom" placeholder="Prénom*" required>
@@ -34,7 +34,16 @@
 
             <input class="submit" type="submit" value="ENVOYER">
         </form>
-        
+        <?php
+        var_dump($_POST['message']);die;
+    if (isset($_POST['message'])) {
+        $retour = mail('adil.kardal@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: adil.kardal@gmail.com' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+        if($retour){
+            echo '<p>Votre message a bien été envoyé.</p>';
+        }
+            
+    }
+    ?>
     <?php require("./view_footer.php") ?>
 </body>
 

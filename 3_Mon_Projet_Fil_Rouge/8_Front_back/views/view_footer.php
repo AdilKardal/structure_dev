@@ -1,3 +1,3 @@
 <footer>
-        <p>2022 &copy; LaiaCréa. Tous droits réservés</p>
+        <p>2023 &copy; LaiaCréa. Tous droits réservés</p>
 </footer>

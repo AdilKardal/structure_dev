@@ -10,9 +10,10 @@
 <body>
 <?php require("./view_header.php") ?>
 <div class="containcatcoffret">
+    <a href="#" class="coffretnai">Naissance 🍼</a> 
     <a href="view_produit.php" class="coffretmar">Mariage 💍</a>
-    <a href="#" class="coffretnai">Naissance 🍼</a>
     <a href="#" class="coffretvoy">Voyage ✈️</a>
+    <a href="#" class="coffretmai">Maison 🏠</a>
 </div>
 <?php require("./view_footer.php") ?>
 </body>

@@ -30,34 +30,37 @@
     <span id="precedent" onclick="changeSlide(-1)" class="material-icons-outlined">chevron_left</span>
     <span id="suivant" onclick="changeSlide(1)" class="material-icons-outlined">chevron_right</span>
   </div>
-  <div class="textacc">"Transformez vos souvenirs en œuvres d'art personnalisées avec notre site de personnalisation d'objets. Des mariages aux naissances en passant par les voyages et la décoration intérieure, créez des pièces uniques qui reflètent votre style et vos moments les plus précieux."</div>
-  <section class="contain">
+
+  <div class="textacc">"Des mariages aux naissances en passant par les voyages et la décoration intérieure, créez des pièces uniques qui reflètent votre style et vos moments les plus précieux."
+  </div>
+
+  <section class="containacc">
     <article class="cat">
 
       <a href="#">
         <div>
-          <img src="images/bebeg.webp" alt="">
+          <img src="images/baby_deco.jpg" alt="" width="150">
           <p>Naissances</p>
         </div>
       </a>
 
       <a href="#">
         <div>
-          <img src="images/bougie.webp" alt="">
+          <img src="images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg" alt="" width="150">
           <p>Maison</p>
         </div>
       </a>
 
       <a href="#">
         <div>
-          <img src="images/mariage.webp" alt="">
+          <img src="images/lit_wedd.jpeg" alt="" width="150">
           <p>Mariage</p>
         </div>
       </a>
 
       <a href="#">
         <div>
-          <img src="images/voyage.webp" alt="">
+          <img src="images/passport_avion.jpeg" alt="" width="150">
           <p>Voyage</p>
         </div>
       </a>

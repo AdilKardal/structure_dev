@@ -22,12 +22,13 @@ if (!empty($_POST['form_insert'])) {
                 $message = "Extension non autorisée";
             } else {
                 // Si ce n'est pas le cas, on vient l'ajouter avec une requête INSERT 
-                $insert = $db->prepare("INSERT INTO produit(nom_produit, description_produit, prix_produit, image_produit)
-                                VALUES(:nom_produit, :description_produit, :prix_produit, :image_produit);");
+                $insert = $db->prepare("INSERT INTO produit(nom_produit, description_produit, prix_produit, image_produit, id_categorie)
+                                VALUES(:nom_produit, :description_produit, :prix_produit, :image_produit, :id_categorie);");
                 $insert->bindParam(":nom_produit", $_POST['nom_produit']);
                 $insert->bindParam(":description_produit", $_POST['description_produit']);
                 $insert->bindParam(":prix_produit", $_POST['prix_produit']);
                 $insert->bindParam(":image_produit", $_FILES['image_produit']['name']);
+                $insert->bindParam(":id_categorie", $_POST['id_categorie']);
                 // On vient importer l'image téléchargée dans le dossier "imgproduit"
                 if ($insert->execute()) {
                     $fichier = move_uploaded_file($tmpName, "../views/imgproduit/" . $name);

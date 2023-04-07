@@ -28,6 +28,14 @@ $produit = $req->fetch();
             <input type="file" name="image_produit" value="<?=$produit['image_produit']?>">
         </label>
         <br/>
+        <label for="id_categorie">Catégorie:</label>
+            <select id="id_categorie" name="id_categorie">
+                <option value="1">Naissances</option>
+                <option value="2">Mariages</option>
+                <option value="3">Voyage</option>
+                <option value="4">Maison</option>
+            </select>
         <input type="submit" value="Mettre à jour">
     </form>
 </fieldset>
+<a href="view_admin.php">Retour</a>

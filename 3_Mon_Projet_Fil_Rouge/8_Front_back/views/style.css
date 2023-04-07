@@ -128,9 +128,11 @@ a {
 }
 /******************************************************************ACCUEIL*************************************************/
 .textacc{
-  width: 50%;
+  margin: auto;
+  text-align: center;
   font-size: 30px;
   font-family: "economica";
+
 }
 /**********************************SLIDER*************************/
 /* .best{
@@ -184,7 +186,8 @@ a {
 }
 .coffretmar,
 .coffretnai,
-.coffretvoy {
+.coffretvoy,
+.coffretmai {
   border-radius: 5px;
   height: 450px;
   background-color: #3e8e41;
@@ -198,7 +201,8 @@ a {
 }
 .coffretmar:hover,
 .coffretnai:hover,
-.coffretvoy:hover{
+.coffretvoy:hover,
+.coffretmai:hover{
     transition: opacity 0.8s ease;
     opacity: 1;
 }
@@ -214,6 +218,10 @@ background-size: cover;
 }
 .coffretvoy{
     background: url("images/passport_avion.jpeg");
+    background-size: cover;
+}
+.coffretmai{
+  background: url("images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg");
     background-size: cover;
 }
 /**********************************CATEGORIES**********************/
@@ -233,6 +241,8 @@ background-size: cover;
 
 .cat img {
   z-index: 2;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   transition: transform 0.1s;
 }
@@ -273,19 +283,26 @@ td {
   display: flex;
   flex-direction: column;
   margin: 6% 10%;
-  background: var(--color2);
   padding: 20px;
 }
 .formcontact input,
 .formcontact textarea,
 .formcontact select {
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 2px;
   margin: auto;
   padding: 5px;
   margin-bottom: 1%;
   width: 70%;
   align-items: center;
+  border: none;
+  border-left: 3px solid var(--color2);
+  border-bottom: 3px solid var(--color2);;
+}
+.formcontact input::placeholder,
+.formcontact textarea::placeholder,
+.formcontact select::placeholder{
+  /* color: var(--color2); */
 }
 .formcontact textarea {
   resize: none;
@@ -298,6 +315,7 @@ td {
   color: var(--color2);
   font-weight: bold;
   cursor: pointer;
+  border: 3px solid var(--color2);
 }
 /******************Connexion Inscription******************/
 .containerconnexion {
@@ -323,4 +341,9 @@ footer {
   justify-content: center;
   margin: auto;
 }
-
+.product{
+  /* align-items: center; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+}

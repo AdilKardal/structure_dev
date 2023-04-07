@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,21 @@
 
 <body>
 
-    <?php require("view_header.php"); ?>
 
-    <div class="containproduct">
-        <img src="images/laia_logo_arche.jpeg" alt="" width="500">
+    <?php require("view_header.php");
+          require_once("../models/connect.php");
+    $req = $db->prepare('SELECT * FROM produit WHERE id_categorie=:id_categorie;');
+    $id = 2;
+    $req->bindParam(":id_categorie", $_GET['id_categorie']);
+    $req->execute();
+    $produit = $req->fetch();
+
+    var_dump($produit);?>
+        <div class="containproduct">
+        <img src="imgproduit/<?=$produit['image_produit']?>" alt="" width="500">
         <div class="product">
-            <h3>ICI LE TITRE</h3>
-            <p>Ce sac à dos est parfait pour les randonneurs expérimentés ou les débutants qui souhaitent partir en toute sécurité dans la nature. Il est fabriqué à partir de matériaux de haute qualité et est très confortable à porter, même pendant de longues randonnées.</p>
+            <h3><?=$produit['nom_produit']?></h3>
+            <p><?=$produit['description_produit']?></p>
             <ul>
                 <li>Compartiment principal spacieux</li>
                 <li>Plusieurs poches pour ranger vos affaires</li>
@@ -25,14 +33,13 @@
                 <li>Sangles de compression pour maintenir votre équipement en place</li>
             </ul>
             <p>Ce sac à dos est disponible en plusieurs tailles pour s'adapter à tous les besoins. Le prix varie en fonction de la taille choisie :</p>
-            <ul>
-                <li>Petit : 79,99 €</li>
-                <li>Moyen : 89,99 €</li>
-                <li>Grand : 99,99 €</li>
-            </ul>
+           <p><?=$produit['prix_produit']?>€</p>
             <p>Commandez maintenant et partez à l'aventure en toute tranquillité !</p>
         </div>
     </div>
+ 
+
+    
 
     <?php require("view_footer.php"); ?>
 </body>
