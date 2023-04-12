@@ -16,11 +16,9 @@
           require_once("../models/connect.php");
     $req = $db->prepare('SELECT * FROM produit WHERE id_categorie=:id_categorie;');
     $id = 2;
-    $req->bindParam(":id_categorie", $_GET['id_categorie']);
+    $req->bindParam(":id_categorie", $_GET['id']);
     $req->execute();
-    $produit = $req->fetch();
-
-    var_dump($produit);?>
+    $produit = $req->fetch();?>
         <div class="containproduct">
         <img src="imgproduit/<?=$produit['image_produit']?>" alt="" width="500">
         <div class="product">
@@ -34,11 +32,11 @@
             </ul>
             <p>Ce sac à dos est disponible en plusieurs tailles pour s'adapter à tous les besoins. Le prix varie en fonction de la taille choisie :</p>
            <p><?=$produit['prix_produit']?>€</p>
-            <p>Commandez maintenant et partez à l'aventure en toute tranquillité !</p>
+            <p>Personnalisez votre objet en prenant <a class="aproduit" href="view_contact.php">contact ici</a></p>
         </div>
     </div>
  
-
+ <a href="view_coffret.php"><p>Retour aux coffrets</p></a>
     
 
     <?php require("view_footer.php"); ?>

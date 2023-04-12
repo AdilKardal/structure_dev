@@ -30,7 +30,7 @@ nav {
   text-align: center;
   margin-bottom: 10px;
 }
-a {
+a{
   text-decoration: none;
   color: black;
   font-family: "economica";
@@ -38,43 +38,6 @@ a {
   font-size: 25px;
 }
 
-.dropbtn {
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  text-decoration: none;
-  display: inline;
-}
-
-.dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.089);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
 
 .btnconnect {
   color: #3e8e41;
@@ -244,7 +207,7 @@ background-size: cover;
   width: 230px;
   height: 230px;
   border-radius: 50%;
-  transition: transform 0.1s;
+  transition: transform 0.8s;
 }
 .cat img:hover {
   transform: scale(1.1);
@@ -296,13 +259,13 @@ td {
   width: 70%;
   align-items: center;
   border: none;
-  border-left: 3px solid var(--color2);
-  border-bottom: 3px solid var(--color2);;
+  border-left: 1px solid var(--color2);
+  border-bottom: 1px solid var(--color2);;
 }
 .formcontact input::placeholder,
 .formcontact textarea::placeholder,
 .formcontact select::placeholder{
-  /* color: var(--color2); */
+  font-weight: bold;
 }
 .formcontact textarea {
   resize: none;
@@ -317,6 +280,21 @@ td {
   cursor: pointer;
   border: 3px solid var(--color2);
 }
+#formperso{
+  display: none;
+}
+.msgenvoye{
+  text-align: center;
+  color: #3e8e41;
+  font-family: "Economica";
+  font-size: 20px;
+}
+.msgnonenvoye{
+  text-align: center;
+  color: red;
+  font-family: "Economica";
+  font-size: 20px;
+}
 /******************Connexion Inscription******************/
 .containerconnexion {
   display: flex;
@@ -328,9 +306,11 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  right: 0;
+  max-width: 100%;
   font-size: 20px;
   padding: 30px;
+  margin-top: auto ;
   /* border-top:1px solid var(--color2) ;
     box-shadow: 1px 3px 8px var(--color2); */
 }
@@ -340,6 +320,9 @@ footer {
   display: flex;
   justify-content: center;
   margin: auto;
+}
+.containproduct img{
+  margin-right: 5%;
 }
 .product{
   /* align-items: center; */

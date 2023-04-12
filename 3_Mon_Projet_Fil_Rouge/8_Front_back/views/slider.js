@@ -1,7 +1,7 @@
 let image = document.querySelector("#slide");
 
 //On déclare un tableau d'images 
-let arrayImg = ["images/passport_avion.jpeg", "images/lit_wedd.jpeg","images/voyage.webp"];
+let arrayImg = ["images/passport_avion.jpg", "images/lit_wedd.jpg","images/voyage.webp"];
 let numero = 0;
 // La fonction ChangeSlide permet de changer le sens du caroussel
 function changeSlide(sens) {
@@ -17,3 +17,18 @@ function changeSlide(sens) {
 }
 // La méthode setInterval appelle la fonction changeSlide toutes les 2.5s
 // setInterval("changeSlide(1)", 2500);
+
+
+function afficherSelect() {
+    // Récupération de la valeur sélectionnée dans la liste déroulante
+    let motif = document.querySelector("#motif").value;
+    // Récupération du formulaire masqué
+    let formperso = document.querySelector("#formperso")
+    // Si la valeur sélectionnée est "Personnalisation" on affiche le formulaire
+    if (motif === "Personnalisation") {
+        formperso.style.display = "block";
+        //sinon on le masque
+    } else{
+        formperso.style.display = "none";
+    }
+  }

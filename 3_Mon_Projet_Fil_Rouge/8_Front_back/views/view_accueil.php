@@ -25,7 +25,7 @@
 
   <div id="slider">
     <div>
-      <img src="images/bebe.webp" alt="" id="slide">
+      <img src="images/voyage.webp" alt="" id="slide">
     </div>
     <span id="precedent" onclick="changeSlide(-1)" class="material-icons-outlined">chevron_left</span>
     <span id="suivant" onclick="changeSlide(1)" class="material-icons-outlined">chevron_right</span>
@@ -35,35 +35,36 @@
   </div>
 
   <section class="containacc">
+  <?php $cat = $db->query('SELECT * FROM categorie')->fetchAll(); ?>
     <article class="cat">
 
-      <a href="#">
+      <a href="view_produit.php?id=1">
         <div>
           <img src="images/baby_deco.jpg" alt="" width="150">
           <p>Naissances</p>
         </div>
       </a>
-
-      <a href="#">
-        <div>
-          <img src="images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg" alt="" width="150">
-          <p>Maison</p>
-        </div>
-      </a>
-
-      <a href="#">
+      <a href="view_produit.php?id=2">
         <div>
           <img src="images/lit_wedd.jpeg" alt="" width="150">
           <p>Mariage</p>
         </div>
       </a>
 
-      <a href="#">
+      <a href="view_produit.php?id=3">
         <div>
           <img src="images/passport_avion.jpeg" alt="" width="150">
           <p>Voyage</p>
         </div>
       </a>
+
+      <a href="view_produit.php?id=4">
+        <div>
+          <img src="images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg" alt="" width="150">
+          <p>Maison</p>
+        </div>
+      </a>
+
     </article>
   </section>
 

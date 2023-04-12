@@ -3,10 +3,10 @@
 ?>
 <header>
   <nav>
-    <a href="view_accueil.php"><img src="images/laia_logo_arche.jpeg" alt="" width="150" height="130"></a>
+    
     <a href="view_accueil.php">Accueil</a>
     <a href="view_coffret.php">Nos coffrets</a>
-    <a href="view_personnalisation.php">Personnalisation</a>
+    <a href="view_accueil.php"><img src="images/laia_logo_arche.jpeg" alt="" width="150" height="130"></a>
     <a href="view_contact.php">Contact</a>
     <?php
     if (isset($_SESSION['user']) && $_SESSION['user'] !== null && $_SESSION['user']['id_role_utilisateur'] == 2) { ?>

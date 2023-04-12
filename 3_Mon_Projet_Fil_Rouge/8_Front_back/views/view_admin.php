@@ -67,6 +67,7 @@
                     <td>Description</td>
                     <td>Prix</td>
                     <td>Image</td>
+                    <td>Catégorie</td>
                     <td>Mise à jour</td>
                     <td>Suppression</td>
                 </tr>
@@ -78,6 +79,7 @@
                         <td><?= ucfirst($produit['description_produit']) ?></td>
                         <td><?= $produit['prix_produit'] ?></td>
                         <td><?= $produit['image_produit'] ?></td>
+                        <td><?= $produit['id_categorie'] ?></td>
                         <td>
                             <a href="view_update.php?id=<?= $produit['id_produit'] ?>">Editer</a>
                         </td>

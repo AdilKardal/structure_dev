@@ -11,7 +11,7 @@ if (!empty($_POST['form_insert'])) {
     $select->execute();
     if (empty($select->fetch(PDO::FETCH_COLUMN))) {
         if (isset($_FILES['image_produit'])) {
-            $extensions_ok = array('png', 'jpg');
+            $extensions_ok = array('png', 'jpg', 'jpeg', 'webp');
             // Stocke le chemin et le nom temporaire du fichier importé (ex /tmp/125423.pdf)
             $tmpName = $_FILES['image_produit']['tmp_name'];
             // Stocke le nom du fichier (nom du fichier et son extension importé ex : test.jpg)
