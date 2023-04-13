@@ -1,7 +1,7 @@
 let image = document.querySelector("#slide");
 
 //On déclare un tableau d'images 
-let arrayImg = ["images/passport_avion.jpg", "images/lit_wedd.jpg","images/voyage.webp"];
+let arrayImg = ["images/passport_avion.jpg", "images/lit_wedd.jpg"];
 let numero = 0;
 // La fonction ChangeSlide permet de changer le sens du caroussel
 function changeSlide(sens) {
@@ -16,7 +16,7 @@ function changeSlide(sens) {
     
 }
 // La méthode setInterval appelle la fonction changeSlide toutes les 2.5s
-// setInterval("changeSlide(1)", 2500);
+setInterval("changeSlide(1)", 2500);
 
 
 function afficherSelect() {
@@ -31,4 +31,21 @@ function afficherSelect() {
     } else{
         formperso.style.display = "none";
     }
+  }
+
+  function menuBurger(){
+    let icon = document.querySelector("#burgericon");
+    let menu = document.querySelector("#menuburger");
+    let affiche = true;
+    menu.style.display = "none"
+
+    icon.addEventListener("click", function(){
+       if (affiche) {
+        menu.style.display = 'flex';
+        affiche == false
+       } else if (affiche == false){
+        menu.style.display = "none"
+        affiche == true
+       }
+    })
   }

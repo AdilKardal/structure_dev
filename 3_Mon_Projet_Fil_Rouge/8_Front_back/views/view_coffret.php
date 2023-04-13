@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,7 @@
         <?php } ?>
     </div>
     <?php require("./view_footer.php") ?>
+    <script src="slider.js"></script>
 </body>
 
 </html>

@@ -28,7 +28,7 @@
             </label>
             <br />
             <label>Description:
-                <input type="text" name="description_produit">
+            <textarea  name="description_produit"></textarea>
             </label>
             <br />
             <label>Prix:
@@ -96,7 +96,6 @@
             </tbody>
         </table>
         <?php require("view_footer.php") ?>
-        <script src="script.js"></script>
 </body>
 
 </html>

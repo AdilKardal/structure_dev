@@ -26,10 +26,14 @@ header {
   margin-bottom: 2%;
 }
 
-nav {
+.nav {
   text-align: center;
   margin-bottom: 10px;
 }
+#burger, #menuburger{
+display: none;
+}
+
 a{
   text-decoration: none;
   color: black;
@@ -54,6 +58,19 @@ a{
   font-family: "economica";
 }
 
+@media(max-width: 965px){
+  .nav{
+      display: none;
+  }
+  #burger{
+    display: block;
+  }
+  #menuburger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /*******************************CONNEXION**************************/
 .container {
   display: flex;
@@ -157,8 +174,8 @@ a{
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 20%;
   font-size: 50px;
+  width: 100%;
   opacity: 0.7;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
@@ -187,6 +204,18 @@ background-size: cover;
   background: url("images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg");
     background-size: cover;
 }
+
+@media(max-width:965px){
+  .containcatcoffret{
+    flex-wrap: wrap;
+  }
+  .coffretmar,
+.coffretnai,
+.coffretvoy,
+.coffretmai {
+  width: 80%;
+}
+}
 /**********************************CATEGORIES**********************/
 .cat p {
   font-family: "economica";
@@ -211,6 +240,13 @@ background-size: cover;
 }
 .cat img:hover {
   transform: scale(1.1);
+}
+@media(max-width:965px){
+  .cat{
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
 }
 /***************************************PRODUIT***************************************/
 .sectionproduit {
@@ -295,10 +331,20 @@ td {
   font-family: "Economica";
   font-size: 20px;
 }
+
+@media(max-width:965px){
+  .formcontact{
+    margin: 4% 0%;
+  }
+  .formcontact input[type="submit"]{
+    width: 40%;
+  }
+}
 /******************Connexion Inscription******************/
 .containerconnexion {
   display: flex;
 }
+
 /***************************FOOTER******************/
 footer {
   background-color: var(--color1);
@@ -309,12 +355,12 @@ footer {
   right: 0;
   max-width: 100%;
   font-size: 20px;
-  padding: 30px;
+  padding: 10px;
   margin-top: auto ;
   /* border-top:1px solid var(--color2) ;
     box-shadow: 1px 3px 8px var(--color2); */
 }
-
+/*****************************************************************/
 .containproduct{
   width: 60%;
   display: flex;
@@ -323,10 +369,21 @@ footer {
 }
 .containproduct img{
   margin-right: 5%;
+  width:400px ;
+  height: 500px;
 }
 .product{
   /* align-items: center; */
 display: flex;
 flex-direction: column;
 justify-content: center;
+}
+
+@media(max-width:965px){
+  .containproduct{
+    flex-direction: column;
+  }
+  .containproduct img {
+    width: 100%;
+  }
 }

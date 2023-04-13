@@ -20,19 +20,16 @@
     $req->execute();
     $produit = $req->fetch();?>
         <div class="containproduct">
-        <img src="imgproduit/<?=$produit['image_produit']?>" alt="" width="500">
+        <img src="imgproduit/<?=$produit['image_produit']?>" alt="">
         <div class="product">
             <h3><?=$produit['nom_produit']?></h3>
-            <p><?=$produit['description_produit']?></p>
+            <p>Pack comportant</p>
             <ul>
-                <li>Compartiment principal spacieux</li>
-                <li>Plusieurs poches pour ranger vos affaires</li>
-                <li>Bretelles rembourrées pour plus de confort</li>
-                <li>Sangles de compression pour maintenir votre équipement en place</li>
+                <?=$produit['description_produit']?>
             </ul>
-            <p>Ce sac à dos est disponible en plusieurs tailles pour s'adapter à tous les besoins. Le prix varie en fonction de la taille choisie :</p>
-           <p><?=$produit['prix_produit']?>€</p>
-            <p>Personnalisez votre objet en prenant <a class="aproduit" href="view_contact.php">contact ici</a></p>
+            <p>Ce coffret est personnalisable selon vos envies, couleur et police au choix</p>
+           <p> Prix : <?=$produit['prix_produit']?>€</p>
+            <p>Personnalisez votre <?=$produit['nom_produit']?> en prenant <a class="aproduit" href="view_contact.php">contact ici</a></p>
         </div>
     </div>
  
@@ -40,6 +37,7 @@
     
 
     <?php require("view_footer.php"); ?>
+    <script src="script.js"></script>
 </body>
 
 </html>
