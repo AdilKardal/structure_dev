@@ -232,11 +232,10 @@ background-size: cover;
 }
 
 .cat img {
-  z-index: 2;
   width: 230px;
   height: 230px;
   border-radius: 50%;
-  transition: transform 0.8s;
+  transition: transform 1s ease-in-out;
 }
 .cat img:hover {
   transform: scale(1.1);
@@ -284,6 +283,7 @@ td {
   margin: 6% 10%;
   padding: 20px;
 }
+ #formperso select,
 .formcontact input,
 .formcontact textarea,
 .formcontact select {
@@ -318,6 +318,7 @@ td {
 }
 #formperso{
   display: none;
+  flex-direction: column;
 }
 .msgenvoye{
   text-align: center;
@@ -360,6 +361,7 @@ footer {
   /* border-top:1px solid var(--color2) ;
     box-shadow: 1px 3px 8px var(--color2); */
 }
+
 /*****************************************************************/
 .containproduct{
   width: 60%;

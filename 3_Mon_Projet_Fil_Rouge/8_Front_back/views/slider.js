@@ -24,9 +24,10 @@ function afficherSelect() {
     let motif = document.querySelector("#motif").value;
     // Récupération du formulaire masqué
     let formperso = document.querySelector("#formperso")
+    formperso.style.display = "none";
     // Si la valeur sélectionnée est "Personnalisation" on affiche le formulaire
     if (motif === "Personnalisation") {
-        formperso.style.display = "block";
+        formperso.style.display = "flex";
         //sinon on le masque
     } else{
         formperso.style.display = "none";
