@@ -72,40 +72,21 @@ a{
   }
 }
 /*******************************CONNEXION**************************/
-.container {
+.containerconnexion {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 100%;
+  width: 50%;
+  margin: auto;
   border-radius: 10px;
   background-color: var(--color1);
 }
-.container input {
-  border-radius: 5px;
-  margin: 2%;
-}
-.container form {
-  background-color: var(--color1);
-  border: solid 1px #fab1ab;
-}
-.connect {
-  width: 50%;
-  border-radius: 20px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+.containerconnexion h2{
+  text-align: center;
+  color: #6b5947;
 }
 
-.inscription {
-  width: 50%;
-  border-radius: 20px;
-}
-.container h2 {
-  text-align: center;
-  font-family: "economica";
-  font-size: 30px;
-}
 /******************************************************************ACCUEIL*************************************************/
 .textacc{
   margin: auto;
