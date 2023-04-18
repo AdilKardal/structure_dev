@@ -40,27 +40,27 @@
 
       <a href="view_produit.php?id=1">
         <div>
-          <img src="images/baby_deco.jpg" alt="" width="150">
+          <img src="images/baby_deco.jpg" alt="">
           <p>Naissances</p>
         </div>
       </a>
       <a href="view_produit.php?id=2">
         <div>
-          <img src="images/lit_wedd.jpeg" alt="" width="150">
+          <img src="images/lit_wedd.jpeg" alt="">
           <p>Mariage</p>
         </div>
       </a>
 
       <a href="view_produit.php?id=3">
         <div>
-          <img src="images/passport_avion.jpeg" alt="" width="150">
+          <img src="images/passport_avion.jpeg" alt="">
           <p>Voyage</p>
         </div>
       </a>
 
       <a href="view_produit.php?id=4">
         <div>
-          <img src="images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg" alt="" width="150">
+          <img src="images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg" alt="">
           <p>Maison</p>
         </div>
       </a>

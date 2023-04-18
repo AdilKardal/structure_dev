@@ -331,6 +331,9 @@ td {
 footer {
   background-color: var(--color1);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   left: 0;
   bottom: 0;
