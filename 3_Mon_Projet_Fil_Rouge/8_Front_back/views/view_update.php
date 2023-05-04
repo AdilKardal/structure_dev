@@ -17,7 +17,7 @@ $produit = $req->fetch();
         </label>
         <br/>
         <label>Description:
-            <textarea name="description_produit" value="<?=$produit['description_produit']?>" ></textarea>
+            <textarea name="description_produit"  ><?=$produit['description_produit']?></textarea>
         </label>
         <br/>
         <label>Prix:
@@ -25,7 +25,7 @@ $produit = $req->fetch();
         </label>
         <br/>
         <label>Image:
-            <input type="file" name="image_produit" value="<?=$produit['image_produit']?>">
+            <input type="file" name="image_produit" value="">
         </label>
         <br/>
         <label for="id_categorie">Catégorie:</label>

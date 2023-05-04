@@ -20,7 +20,7 @@
     $req->execute();
     $produit = $req->fetch();?>
         <div class="containproduct">
-        <img src="imgproduit/<?=$produit['image_produit']?>" alt="">
+        <img src="images/<?=$produit['image_produit']?>" alt="">
         <div class="product">
             <h3><?=$produit['nom_produit']?></h3>
             <p>Pack comportant</p>

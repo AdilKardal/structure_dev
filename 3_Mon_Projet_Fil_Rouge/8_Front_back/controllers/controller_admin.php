@@ -1,7 +1,13 @@
 <?php
 include_once('../models/connect.php');
 
-
+if (isset($_FILES['image_produit'])) {
+    $extensions_ok = array('png', 'jpg', 'jpeg');
+    // Stocke le chemin et le nom temporaire du fichier importé (ex /tmp/125423.png)
+    $tmpName = $_FILES['image_produit']['tmp_name'];
+    // Stocke le nom du fichier (nom du fichier et son extension importé ex : test.jpg)
+    $name = $_FILES['image_produit']['name'];
+}
 
 if (!empty($_POST['form_insert'])) {
     $select = $db->prepare("SELECT nom_produit FROM produit WHERE nom_produit=:nom_produit;");
@@ -9,12 +15,6 @@ if (!empty($_POST['form_insert'])) {
     $select->execute();
     if (empty($select->fetch(PDO::FETCH_COLUMN))) {
         if (isset($_FILES['image_produit'])) {
-            $extensions_ok = array('png', 'jpg', 'jpeg');
-            // Stocke le chemin et le nom temporaire du fichier importé (ex /tmp/125423.png)
-            $tmpName = $_FILES['image_produit']['tmp_name'];
-            // Stocke le nom du fichier (nom du fichier et son extension importé ex : test.jpg)
-            $name = $_FILES['image_produit']['name'];
-
             if (in_array(substr(strrchr($name, '.'), 1), $extensions_ok)) {
                 // On vient ajouter le produit avec une requête INSERT 
                 $insert = $db->prepare("INSERT INTO produit(nom_produit, description_produit, prix_produit, image_produit, id_categorie)
@@ -41,7 +41,7 @@ if (!empty($_POST['form_insert'])) {
             SET nom_produit=:nom_produit, 
                 description_produit=:description_produit, 
                 prix_produit=:prix_produit ';
-    if (!empty($_FILES)) {
+    if (!empty($tmpName)) {
         $sql .= ' , image_produit=:image_produit ';
     }
     $sql .= ' WHERE id_produit=:id_produit;';
@@ -49,11 +49,11 @@ if (!empty($_POST['form_insert'])) {
     $req->bindParam(":nom_produit", $_POST['nom_produit']);
     $req->bindParam(":description_produit", $_POST['description_produit']);
     $req->bindParam(":prix_produit", $_POST['prix_produit']);
-    if (!empty($_FILES)) {
-        $req->bindParam(":image_produit", $_FILES['image_produit']['name']);
+    if (!empty($tmpName)) {
+        $req->bindParam(":image_produit", $name);
     }
     $req->bindParam(":id_produit", $_POST['id_produit']);
-    if ($req->execute() && !empty($_FILES)) {
+    if ($req->execute() && !empty($tmpName)) {
         $fichier = move_uploaded_file($tmpName, "../views/imgproduit/" . $name);
     }
     $req->execute();
