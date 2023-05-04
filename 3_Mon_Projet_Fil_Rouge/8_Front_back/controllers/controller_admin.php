@@ -4,24 +4,19 @@ include_once('../models/connect.php');
 
 
 if (!empty($_POST['form_insert'])) {
-    $color = "transparent; display: none;";
-    $message = "";
     $select = $db->prepare("SELECT nom_produit FROM produit WHERE nom_produit=:nom_produit;");
     $select->bindParam(":nom_produit", $_POST["nom_produit"]);
     $select->execute();
     if (empty($select->fetch(PDO::FETCH_COLUMN))) {
         if (isset($_FILES['image_produit'])) {
-            $extensions_ok = array('png', 'jpg', 'jpeg', 'webp');
-            // Stocke le chemin et le nom temporaire du fichier importé (ex /tmp/125423.pdf)
+            $extensions_ok = array('png', 'jpg', 'jpeg');
+            // Stocke le chemin et le nom temporaire du fichier importé (ex /tmp/125423.png)
             $tmpName = $_FILES['image_produit']['tmp_name'];
             // Stocke le nom du fichier (nom du fichier et son extension importé ex : test.jpg)
             $name = $_FILES['image_produit']['name'];
 
-            if (!in_array(substr(strrchr($_FILES['image_produit']['name'], '.'), 1), $extensions_ok)) {
-                $color = "red";
-                $message = "Extension non autorisée";
-            } else {
-                // Si ce n'est pas le cas, on vient l'ajouter avec une requête INSERT 
+            if (in_array(substr(strrchr($name, '.'), 1), $extensions_ok)) {
+                // On vient ajouter le produit avec une requête INSERT 
                 $insert = $db->prepare("INSERT INTO produit(nom_produit, description_produit, prix_produit, image_produit, id_categorie)
                                 VALUES(:nom_produit, :description_produit, :prix_produit, :image_produit, :id_categorie);");
                 $insert->bindParam(":nom_produit", $_POST['nom_produit']);
@@ -33,46 +28,41 @@ if (!empty($_POST['form_insert'])) {
                 if ($insert->execute()) {
                     $fichier = move_uploaded_file($tmpName, "../views/imgproduit/" . $name);
                 }
+                // si l'extension du fichier n'est pas bonne, un message d'erreur est affiché
+            } else {
+                echo "Erreur : les extensions de fichier ne sont pas autorisées.";
             }
         }
     }
-
-    $color = "green;";
-    $message = "Insertion effectuée";
+    echo "Produit ajouté";
     // UPDATE 
 } elseif (!empty($_POST['form_update'])) {
-    // var_dump($_FILES);die;
     $sql = 'UPDATE produit 
             SET nom_produit=:nom_produit, 
                 description_produit=:description_produit, 
-                prix_produit=:prix_produit,
-                image_produit=:image_produit ';
+                prix_produit=:prix_produit ';
+    if (!empty($_FILES)) {
+        $sql .= ' , image_produit=:image_produit ';
+    }
     $sql .= ' WHERE id_produit=:id_produit;';
     $req = $db->prepare($sql);
     $req->bindParam(":nom_produit", $_POST['nom_produit']);
     $req->bindParam(":description_produit", $_POST['description_produit']);
     $req->bindParam(":prix_produit", $_POST['prix_produit']);
-    $req->bindParam(":image_produit", $_FILES['image_produit']['name']);
-    if (empty($_FILES)) {
+    if (!empty($_FILES)) {
         $req->bindParam(":image_produit", $_FILES['image_produit']['name']);
     }
     $req->bindParam(":id_produit", $_POST['id_produit']);
-    if ($req->execute()) {
+    if ($req->execute() && !empty($_FILES)) {
         $fichier = move_uploaded_file($tmpName, "../views/imgproduit/" . $name);
     }
     $req->execute();
-
-    $color = "orange;";
-    $message = "Mise à jour effectuée";
     // DELETE 
 } elseif (!empty($_POST['form_delete'])) {
     $sql = 'DELETE FROM produit WHERE id_produit=:id_produit;';
     $req = $db->prepare($sql);
     $req->bindParam(":id_produit", $_POST['id_produit']);
     $req->execute();
-
-    $color = "red;";
-    $message = "Suppression effectuée";
 }
 
 $produits = $db->query('SELECT * FROM produit')->fetchAll();

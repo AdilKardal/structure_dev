@@ -33,7 +33,7 @@
         </div>
     </div>
  
- <a href="view_coffret.php"><p>Retour aux coffrets</p></a>
+ <a class="acoff" href="view_coffret.php"><p>Retour aux coffrets</p></a>
     
 
     <?php require("view_footer.php"); ?>

@@ -30,18 +30,18 @@ header {
   text-align: center;
   margin-bottom: 10px;
 }
-#burger, #menuburger{
-display: none;
+#burger,
+#menuburger {
+  display: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
   font-family: "economica";
   margin: 0px 50px;
   font-size: 25px;
 }
-
 
 .btnconnect {
   color: #3e8e41;
@@ -58,14 +58,14 @@ a{
   font-family: "economica";
 }
 
-@media(max-width: 965px){
-  .nav{
-      display: none;
+@media (max-width: 965px) {
+  .nav {
+    display: none;
   }
-  #burger{
+  #burger {
     display: block;
   }
-  #menuburger{
+  #menuburger {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,18 +82,17 @@ a{
   border-radius: 10px;
   background-color: var(--color1);
 }
-.containerconnexion h2{
+.containerconnexion h2 {
   text-align: center;
   color: #6b5947;
 }
 
 /******************************************************************ACCUEIL*************************************************/
-.textacc{
+.textacc {
   margin: auto;
   text-align: center;
   font-size: 30px;
   font-family: "economica";
-
 }
 /**********************************SLIDER*************************/
 /* .best{
@@ -158,44 +157,52 @@ a{
   font-size: 50px;
   width: 100%;
   opacity: 0.7;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
 }
 .coffretmar:hover,
 .coffretnai:hover,
 .coffretvoy:hover,
-.coffretmai:hover{
-    transition: opacity 0.8s ease;
-    opacity: 1;
+.coffretmai:hover {
+  transition: opacity 0.8s ease;
+  opacity: 1;
 }
 
-.coffretmar{
-background: url("images/lit_wedd.jpeg") no-repeat;
-background-size: cover;
+.coffretmar {
+  background: url("images/lit_wedd.webp") no-repeat;
+  background-size: cover;
 }
 
-.coffretnai{
-    background: url("images/baby_deco.jpg");
-    background-size: cover;
+.coffretnai {
+  background: url("images/baby_deco.webp");
+  background-size: cover;
 }
-.coffretvoy{
-    background: url("images/passport_avion.jpeg");
-    background-size: cover;
+.coffretvoy {
+  background: url("images/passport_avion.webp");
+  background-size: cover;
 }
-.coffretmai{
-  background: url("images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg");
-    background-size: cover;
+.coffretmai {
+  background: url("images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.webp");
+  background-size: cover;
+}
+.aproduit {
+  font-size: 18px;
+  margin: 0;
 }
 
-@media(max-width:965px){
-  .containcatcoffret{
+.acoff{
+  text-align: center;
+}
+@media (max-width: 965px) {
+  .containcatcoffret {
     flex-wrap: wrap;
   }
   .coffretmar,
-.coffretnai,
-.coffretvoy,
-.coffretmai {
-  width: 80%;
-}
+  .coffretnai,
+  .coffretvoy,
+  .coffretmai {
+    width: 80%;
+  }
 }
 /**********************************CATEGORIES**********************/
 .cat p {
@@ -221,8 +228,8 @@ background-size: cover;
 .cat img:hover {
   transform: scale(1.1);
 }
-@media(max-width:965px){
-  .cat{
+@media (max-width: 965px) {
+  .cat {
     /* flex-direction: column; */
     flex-wrap: wrap;
     margin-bottom: 100px;
@@ -264,7 +271,7 @@ td {
   margin: 6% 10%;
   padding: 20px;
 }
- #formperso select,
+#formperso select,
 .formcontact input,
 .formcontact textarea,
 .formcontact select {
@@ -277,11 +284,11 @@ td {
   align-items: center;
   border: none;
   border-left: 1px solid var(--color2);
-  border-bottom: 1px solid var(--color2);;
+  border-bottom: 1px solid var(--color2);
 }
 .formcontact input::placeholder,
 .formcontact textarea::placeholder,
-.formcontact select::placeholder{
+.formcontact select::placeholder {
   font-weight: bold;
 }
 .formcontact textarea {
@@ -297,28 +304,28 @@ td {
   cursor: pointer;
   border: 3px solid var(--color2);
 }
-#formperso{
+#formperso {
   display: none;
   flex-direction: column;
 }
-.msgenvoye{
+.msgenvoye {
   text-align: center;
   color: #3e8e41;
   font-family: "Economica";
   font-size: 20px;
 }
-.msgnonenvoye{
+.msgnonenvoye {
   text-align: center;
   color: red;
   font-family: "Economica";
   font-size: 20px;
 }
 
-@media(max-width:965px){
-  .formcontact{
+@media (max-width: 965px) {
+  .formcontact {
     margin: 4% 0%;
   }
-  .formcontact input[type="submit"]{
+  .formcontact input[type="submit"] {
     width: 40%;
   }
 }
@@ -341,32 +348,31 @@ footer {
   max-width: 100%;
   font-size: 20px;
   padding: 10px;
-  margin-top: auto ;
+  margin-top: auto;
   /* border-top:1px solid var(--color2) ;
     box-shadow: 1px 3px 8px var(--color2); */
 }
-
 /*****************************************************************/
-.containproduct{
+.containproduct {
   width: 60%;
   display: flex;
   justify-content: center;
   margin: auto;
 }
-.containproduct img{
+.containproduct img {
   margin-right: 5%;
-  width:400px ;
+  width: 400px;
   height: 500px;
 }
-.product{
+.product {
   /* align-items: center; */
-display: flex;
-flex-direction: column;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media(max-width:965px){
-  .containproduct{
+@media (max-width: 965px) {
+  .containproduct {
     flex-direction: column;
   }
   .containproduct img {

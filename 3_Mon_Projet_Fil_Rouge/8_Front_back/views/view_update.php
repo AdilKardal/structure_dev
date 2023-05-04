@@ -18,7 +18,6 @@ $produit = $req->fetch();
         <br/>
         <label>Description:
             <textarea name="description_produit" value="<?=$produit['description_produit']?>" ></textarea>
-         
         </label>
         <br/>
         <label>Prix:

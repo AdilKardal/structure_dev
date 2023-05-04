@@ -3,7 +3,7 @@ let image = document.querySelector("#slide");
 //On déclare un tableau d'images 
 let arrayImg = ["images/passport_avion.jpg", "images/lit_wedd.jpg"];
 let numero = 0;
-// La fonction ChangeSlide permet de changer le sens du caroussel
+// La fonction changeSlide permet de changer le sens du caroussel
 function changeSlide(sens) {
     numero = numero + sens;
     if (numero < 0){

@@ -25,7 +25,7 @@
 
   <div id="slider">
     <div>
-      <img src="images/voyage.webp" alt="" id="slide">
+      <img src="images/voyage.webp" alt="carrousel d'images" id="slide">
     </div>
     <span id="precedent" onclick="changeSlide(-1)" class="material-icons-outlined">chevron_left</span>
     <span id="suivant" onclick="changeSlide(1)" class="material-icons-outlined">chevron_right</span>
@@ -40,27 +40,27 @@
 
       <a href="view_produit.php?id=1">
         <div>
-          <img src="images/baby_deco.jpg" alt="">
+          <img src="images/baby_deco.webp" alt="">
           <p>Naissances</p>
         </div>
       </a>
       <a href="view_produit.php?id=2">
         <div>
-          <img src="images/lit_wedd.jpeg" alt="">
+          <img src="images/lit_wedd.webp" alt="">
           <p>Mariage</p>
         </div>
       </a>
 
       <a href="view_produit.php?id=3">
         <div>
-          <img src="images/passport_avion.jpeg" alt="">
+          <img src="images/passport_avion.webp" alt="">
           <p>Voyage</p>
         </div>
       </a>
 
       <a href="view_produit.php?id=4">
         <div>
-          <img src="images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.jpg" alt="">
+          <img src="images/1-la-deco-campagne-chic-a-le-vent-en-poupe-maisons-du-monde.webp" alt="">
           <p>Maison</p>
         </div>
       </a>

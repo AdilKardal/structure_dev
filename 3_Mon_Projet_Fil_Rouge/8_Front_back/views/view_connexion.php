@@ -17,7 +17,7 @@
 
   <section class="containerconnexion">
       <article class="formconnect">
-        <h2>Connectez-vous</h2>
+        <h2>Connexion Admin</h2>
         <form action="../controllers/controller_connexion.php" method="post">
           <input type="hidden" name="form_connexion" value="1">
           <!-- <label for="form_email">E-mail</label> -->

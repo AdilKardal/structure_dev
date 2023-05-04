@@ -15,9 +15,7 @@
 </head>
 
 <body>
-    <?php require("view_header.php");
-    $color = "transparent; display: none;";
-    $message = ""; ?>
+    <?php require("view_header.php");?>
     <!-- CREATE -->
     <fieldset>
         <legend>Ajout produit</legend>
@@ -53,9 +51,10 @@
 
     <!-- READ -->
 
-    <div style="font-weight: 600; color: <?= $color ?>"><?= $message ?></div>
     <?php
+    // On récupère tout de la table produit qu'on stocke dans la variable $produits
     $produits = $db->query('SELECT * FROM produit')->fetchAll();
+
     if (empty($produits)) { ?>
         <p>Aucun produit n'est ajouté</p>
     <?php } else { ?>
@@ -80,9 +79,7 @@
                         <td><?= $produit['prix_produit'] ?></td>
                         <td><?= $produit['image_produit'] ?></td>
                         <td><?= $produit['id_categorie'] ?></td>
-                        <td>
-                            <a href="view_update.php?id=<?= $produit['id_produit'] ?>">Editer</a>
-                        </td>
+                        <td><a href="view_update.php?id=<?= $produit['id_produit'] ?>">Editer</a></td>
                         <td>
                             <form method="POST" action="../controllers/controller_admin.php">
                                 <input type="hidden" name="form_delete" value="1">
